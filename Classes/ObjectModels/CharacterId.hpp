@@ -12,14 +12,15 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
+
 #include "../Common/Constants.hpp"
 #include "../Common/Types.hpp"
+
 USING_NS_CC;
 
 class CharacterId : public Ref
 {
 private:
-    
     char* _id;
     
     

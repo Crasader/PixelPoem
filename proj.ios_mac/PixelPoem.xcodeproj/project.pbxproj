@@ -16,13 +16,15 @@
 		3C20AF6B1C3278FF0020A540 /* SelectStageScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF691C3278FF0020A540 /* SelectStageScene.cpp */; };
 		3C20AF6E1C32790E0020A540 /* MainGameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF6C1C32790E0020A540 /* MainGameScene.cpp */; };
 		3C20AF711C327D9F0020A540 /* GamePanelLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF6F1C327D9F0020A540 /* GamePanelLayer.cpp */; };
-		3C20AF741C327EDA0020A540 /* PixelPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF721C327EDA0020A540 /* PixelPanel.cpp */; };
 		3C20AF781C3280320020A540 /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF761C3280320020A540 /* Constants.cpp */; };
 		3C20AF7B1C3280C80020A540 /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF791C3280C80020A540 /* Types.cpp */; };
 		3C20AF7E1C3281D40020A540 /* GameDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF7C1C3281D40020A540 /* GameDefinition.cpp */; };
-		3C20AF811C3284640020A540 /* PixelCharacter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF7F1C3284640020A540 /* PixelCharacter.cpp */; };
-		3C20AF841C3284E60020A540 /* CharacterDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF821C3284E60020A540 /* CharacterDefinition.cpp */; };
+		3C20AF841C3284E60020A540 /* CharacterTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF821C3284E60020A540 /* CharacterTexture.cpp */; };
 		3C20AF871C3287150020A540 /* PoemDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF851C3287150020A540 /* PoemDefinition.cpp */; };
+		3C20AF8B1C3A70170020A540 /* PixelPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF891C3A70170020A540 /* PixelPanel.cpp */; };
+		3C20AF8E1C3A70540020A540 /* CharacterSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF8C1C3A70540020A540 /* CharacterSprite.cpp */; };
+		3C20AF911C3A70770020A540 /* CharacterId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF8F1C3A70770020A540 /* CharacterId.cpp */; };
+		3C20AF941C3A70910020A540 /* PixelDiagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF921C3A70910020A540 /* PixelDiagram.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -128,20 +130,24 @@
 		3C20AF6D1C32790E0020A540 /* MainGameScene.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MainGameScene.hpp; path = Scenes/MainGameScene.hpp; sourceTree = "<group>"; };
 		3C20AF6F1C327D9F0020A540 /* GamePanelLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GamePanelLayer.cpp; path = Scenes/GamePanelLayer.cpp; sourceTree = "<group>"; };
 		3C20AF701C327D9F0020A540 /* GamePanelLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GamePanelLayer.hpp; path = Scenes/GamePanelLayer.hpp; sourceTree = "<group>"; };
-		3C20AF721C327EDA0020A540 /* PixelPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PixelPanel.cpp; path = ObjectModels/PixelPanel.cpp; sourceTree = "<group>"; };
-		3C20AF731C327EDA0020A540 /* PixelPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PixelPanel.hpp; path = ObjectModels/PixelPanel.hpp; sourceTree = "<group>"; };
 		3C20AF761C3280320020A540 /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constants.cpp; path = Common/Constants.cpp; sourceTree = "<group>"; };
 		3C20AF771C3280320020A540 /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Constants.hpp; path = Common/Constants.hpp; sourceTree = "<group>"; };
 		3C20AF791C3280C80020A540 /* Types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Types.cpp; path = Common/Types.cpp; sourceTree = "<group>"; };
 		3C20AF7A1C3280C80020A540 /* Types.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Types.hpp; path = Common/Types.hpp; sourceTree = "<group>"; };
 		3C20AF7C1C3281D40020A540 /* GameDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameDefinition.cpp; path = ObjectModels/GameDefinition.cpp; sourceTree = "<group>"; };
 		3C20AF7D1C3281D40020A540 /* GameDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GameDefinition.hpp; path = ObjectModels/GameDefinition.hpp; sourceTree = "<group>"; };
-		3C20AF7F1C3284640020A540 /* PixelCharacter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PixelCharacter.cpp; path = ObjectModels/PixelCharacter.cpp; sourceTree = "<group>"; };
-		3C20AF801C3284640020A540 /* PixelCharacter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PixelCharacter.hpp; path = ObjectModels/PixelCharacter.hpp; sourceTree = "<group>"; };
-		3C20AF821C3284E60020A540 /* CharacterDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CharacterDefinition.cpp; path = ObjectModels/CharacterDefinition.cpp; sourceTree = "<group>"; };
-		3C20AF831C3284E60020A540 /* CharacterDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CharacterDefinition.hpp; path = ObjectModels/CharacterDefinition.hpp; sourceTree = "<group>"; };
+		3C20AF821C3284E60020A540 /* CharacterTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CharacterTexture.cpp; path = ObjectModels/CharacterTexture.cpp; sourceTree = "<group>"; };
+		3C20AF831C3284E60020A540 /* CharacterTexture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CharacterTexture.hpp; path = ObjectModels/CharacterTexture.hpp; sourceTree = "<group>"; };
 		3C20AF851C3287150020A540 /* PoemDefinition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PoemDefinition.cpp; path = ObjectModels/PoemDefinition.cpp; sourceTree = "<group>"; };
 		3C20AF861C3287150020A540 /* PoemDefinition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PoemDefinition.hpp; path = ObjectModels/PoemDefinition.hpp; sourceTree = "<group>"; };
+		3C20AF891C3A70170020A540 /* PixelPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PixelPanel.cpp; path = Views/PixelPanel.cpp; sourceTree = "<group>"; };
+		3C20AF8A1C3A70170020A540 /* PixelPanel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PixelPanel.hpp; path = Views/PixelPanel.hpp; sourceTree = "<group>"; };
+		3C20AF8C1C3A70540020A540 /* CharacterSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CharacterSprite.cpp; path = Views/CharacterSprite.cpp; sourceTree = "<group>"; };
+		3C20AF8D1C3A70540020A540 /* CharacterSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CharacterSprite.hpp; path = Views/CharacterSprite.hpp; sourceTree = "<group>"; };
+		3C20AF8F1C3A70770020A540 /* CharacterId.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CharacterId.cpp; path = ObjectModels/CharacterId.cpp; sourceTree = "<group>"; };
+		3C20AF901C3A70770020A540 /* CharacterId.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = CharacterId.hpp; path = ObjectModels/CharacterId.hpp; sourceTree = "<group>"; };
+		3C20AF921C3A70910020A540 /* PixelDiagram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PixelDiagram.cpp; path = ObjectModels/PixelDiagram.cpp; sourceTree = "<group>"; };
+		3C20AF931C3A70910020A540 /* PixelDiagram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PixelDiagram.hpp; path = ObjectModels/PixelDiagram.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -332,16 +338,16 @@
 		3C20AF681C3278E00020A540 /* ObjectModels */ = {
 			isa = PBXGroup;
 			children = (
-				3C20AF721C327EDA0020A540 /* PixelPanel.cpp */,
-				3C20AF731C327EDA0020A540 /* PixelPanel.hpp */,
 				3C20AF7C1C3281D40020A540 /* GameDefinition.cpp */,
 				3C20AF7D1C3281D40020A540 /* GameDefinition.hpp */,
-				3C20AF7F1C3284640020A540 /* PixelCharacter.cpp */,
-				3C20AF801C3284640020A540 /* PixelCharacter.hpp */,
-				3C20AF821C3284E60020A540 /* CharacterDefinition.cpp */,
-				3C20AF831C3284E60020A540 /* CharacterDefinition.hpp */,
+				3C20AF821C3284E60020A540 /* CharacterTexture.cpp */,
+				3C20AF831C3284E60020A540 /* CharacterTexture.hpp */,
 				3C20AF851C3287150020A540 /* PoemDefinition.cpp */,
 				3C20AF861C3287150020A540 /* PoemDefinition.hpp */,
+				3C20AF8F1C3A70770020A540 /* CharacterId.cpp */,
+				3C20AF901C3A70770020A540 /* CharacterId.hpp */,
+				3C20AF921C3A70910020A540 /* PixelDiagram.cpp */,
+				3C20AF931C3A70910020A540 /* PixelDiagram.hpp */,
 			);
 			name = ObjectModels;
 			sourceTree = "<group>";
@@ -355,6 +361,17 @@
 				3C20AF7A1C3280C80020A540 /* Types.hpp */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		3C20AF881C3A6F930020A540 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C20AF891C3A70170020A540 /* PixelPanel.cpp */,
+				3C20AF8A1C3A70170020A540 /* PixelPanel.hpp */,
+				3C20AF8C1C3A70540020A540 /* CharacterSprite.cpp */,
+				3C20AF8D1C3A70540020A540 /* CharacterSprite.hpp */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
@@ -373,6 +390,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3C20AF881C3A6F930020A540 /* Views */,
 				3C20AF751C32800D0020A540 /* Common */,
 				3C20AF681C3278E00020A540 /* ObjectModels */,
 				3C20AF671C3278C60020A540 /* Scenes */,
@@ -578,18 +596,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C20AF811C3284640020A540 /* PixelCharacter.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
-				3C20AF841C3284E60020A540 /* CharacterDefinition.cpp in Sources */,
+				3C20AF841C3284E60020A540 /* CharacterTexture.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				3C20AF8E1C3A70540020A540 /* CharacterSprite.cpp in Sources */,
 				3C20AF7B1C3280C80020A540 /* Types.cpp in Sources */,
+				3C20AF8B1C3A70170020A540 /* PixelPanel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				3C20AF941C3A70910020A540 /* PixelDiagram.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3C20AF781C3280320020A540 /* Constants.cpp in Sources */,
-				3C20AF741C327EDA0020A540 /* PixelPanel.cpp in Sources */,
 				3C20AF711C327D9F0020A540 /* GamePanelLayer.cpp in Sources */,
 				3C20AF6B1C3278FF0020A540 /* SelectStageScene.cpp in Sources */,
+				3C20AF911C3A70770020A540 /* CharacterId.cpp in Sources */,
 				3C20AF661C3278BC0020A540 /* TitleScene.cpp in Sources */,
 				3C20AF871C3287150020A540 /* PoemDefinition.cpp in Sources */,
 				3C20AF7E1C3281D40020A540 /* GameDefinition.cpp in Sources */,

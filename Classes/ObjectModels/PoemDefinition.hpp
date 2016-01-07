@@ -14,6 +14,7 @@
 
 #include "../Common/Constants.hpp"
 #include "../Common/Types.hpp"
+#include "CharacterId.hpp"
 
 USING_NS_CC;
 
@@ -24,7 +25,7 @@ private:
     
 	char* _name;
     Vector<CharacterId*>* _characterSequence;
-    
+
     Vector<CharacterId*>* _uniqueCharacters;
     
     

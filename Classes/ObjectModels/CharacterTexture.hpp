@@ -1,5 +1,5 @@
 //
-//  CharacterDefinition.hpp
+//  CharacterTexture.hpp
 //  PixelPoem
 //
 //  Created by SuiYi on 12/29/15.
@@ -16,7 +16,7 @@
 #include "../Common/Types.hpp"
 USING_NS_CC;
 
-class CharacterDefinition : public Ref
+class CharacterTexture : public Ref
 {
 private:
     
@@ -28,10 +28,10 @@ private:
     
 public:
     
-    CharacterDefinition();
-    CharacterDefinition(CharacterDefinition* def);
+    CharacterTexture();
+    CharacterTexture(CharacterTexture* def);
     
     
     
 };
-#endif /* CharacterDefinition_hpp */
+#endif /* CharacterTexture.hpp */
