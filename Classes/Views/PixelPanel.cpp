@@ -7,11 +7,13 @@
 //
 
 #include "PixelPanel.hpp"
+#include "CharacterSprite.hpp"
+#include "../Common/Utils.hpp"
 
 PixelPanel::PixelPanel()
 {
 	_characterIndexes = NULL;
-	_pixelCharacters = new Vector<PixelCharacter*>();
+	_characterSprites = new Vector<CharacterSprite*>();
 }
 
 PixelPanel::~PixelPanel()
@@ -22,7 +24,7 @@ PixelPanel::~PixelPanel()
 		_characterIndexes = NULL;
 	}
 	
-	delete(_pixelCharacters);
+	delete(_characterSprites);
 }
 
 void PixelPanel::generatePixelCharacters()
@@ -31,11 +33,12 @@ void PixelPanel::generatePixelCharacters()
 	int width = diagram->getWidth();
 	int height = diagram->getHeight();
 	
-	_characterIndexes = new int[width][height];
-	for(int j = 0; j < height; j++)
-	{
-		for(int i = 0; i < width; i++)
-		{
+	_characterIndexes = new int*[width];
+    for(int i = 0; i < width; i++)
+    {
+        _characterIndexes[i] = new int[height];
+        for(int j = 0; j < height; j++)
+            {
 			if (diagram->getValue(i, j) == 0)
 			{
 				// Fill with Valid characters
@@ -51,8 +54,8 @@ void PixelPanel::generatePixelCharacters()
 	
 	PoemDefinition* poemDefinition = _definition->getPoemDefinition();
 	
-	_pixelCharacters->clear();
-	_pixelCharacters->pushBack(PixelCharacter::dummyValue());
+	_characterSprites->clear();
+	_characterSprites->pushBack(CharacterSprite::dummyValue());
 	
 	// Step 1: Fill the valid characters
 	Vector<CharacterId*>* validCharacters = poemDefinition->getUniqueCharacters();
@@ -74,7 +77,7 @@ void PixelPanel::generatePixelCharacters()
 				}
 				validMaxWidth = w;
 			}
-			int charWidth = rand(1, validMaxWidth);
+            int charWidth = MathUtils::GetRandomValue(1, validMaxWidth);
 			int validMaxHeight = 1;
 			for(int h = 2; h <= _maxUnitScaleY; h++)
 			{
@@ -91,23 +94,27 @@ void PixelPanel::generatePixelCharacters()
 				}
 				validMaxHeight = h;
 			}
-			int charHeight = rand(1, validMaxHeight);
+			int charHeight = MathUtils::GetRandomValue(1, validMaxHeight);
 			
-			CharacterId* characterId = validCharacters->at(rand(0, validCharacters->size()));
+			CharacterId* characterId = validCharacters->at(MathUtils::GetRandomValue(0, (int)(validCharacters->size())));
 			
 			// Rotate only if the char is 1x1
-			int rotate = (charWidth == 1 && charHeight == 1) ? rand(0,3) : 0;
+			int rotate = (charWidth == 1 && charHeight == 1) ? MathUtils::GetRandomValue(0,3) : 0;
 			
 			// Put a random char with charWidth x charHeight
-			PixelCharacter* character = new PixelCharacter(_defaultFont, _defaultStyle, characterId);
+            CharacterTexture* texture = new CharacterTexture(_defaultFont, _defaultStyle, characterId);
+            CharacterSprite* character = new CharacterSprite(texture);
 			character->setPositionInUnit(Vec2(i,j));
 			character->setScale(charWidth, charHeight);
 			character->setRotate(rotate);
 			
-			_pixelCharacters->pushBack(character);
+			_characterSprites->pushBack(character);
 			
+            texture->release();
+            character->release();
+            
 			// Fill the character index
-			int charIndex = _pixelCharacters->size() - 1;
+			int charIndex = (int)(_characterSprites->size() - 1);
 			for(int w = 1; w <= charWidth; w++)
 			{
 				for(int h = 1; h <= charHeight; h++)

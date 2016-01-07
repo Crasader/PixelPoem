@@ -7,6 +7,9 @@
 //
 
 #include "SelectStageScene.hpp"
+#include "MainGameScene.hpp"
+
+
 
 // on "init" you need to initialize your instance
 bool SelectStageScene::init()
@@ -46,4 +49,11 @@ bool SelectStageScene::init()
     this->addChild(sprite, 0);
     
     return true;
+}
+
+void SelectStageScene::buttonStartCallback(cocos2d::Ref* pSender)
+{
+    Scene* scene = MainGameScene::createScene(1);
+    
+    Director::getInstance()->replaceScene(TransitionCrossFade::create(0.5f, scene));
 }

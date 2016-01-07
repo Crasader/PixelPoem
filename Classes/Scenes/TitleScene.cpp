@@ -9,7 +9,16 @@
 #include "TitleScene.hpp"
 #include "SelectStageScene.hpp"
 
-
+Scene* TitleScene::createScene()
+{
+    Scene* scene = Scene::create();
+    auto layer = TitleScene::create();
+    //layer->init();
+    
+    scene->addChild(layer);
+    
+    return scene;
+}
 
 bool TitleScene::init()
 {
@@ -63,7 +72,7 @@ bool TitleScene::init()
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     
     // add the sprite as a child to this layer
-    //this->addChild(sprite, 0);
+    this->addChild(sprite, 0);
     
     return true;
 }
@@ -81,7 +90,7 @@ void TitleScene::buttonStartCallback(Ref* pSender)
     // add layer as a child to scene
     scene->addChild(layer);
     
-    Director::getInstance()->replaceScene(TransitionFade::create(0.5, scene, Color3B(0,255,255)));
+    Director::getInstance()->replaceScene(TransitionFade::create(2.0f, scene, Color3B(0,255,255)));
 
     
 }

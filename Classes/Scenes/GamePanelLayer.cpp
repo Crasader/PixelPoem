@@ -7,3 +7,12 @@
 //
 
 #include "GamePanelLayer.hpp"
+#include "PixelPanel.hpp"
+
+bool GamePanelLayer::init()
+{
+    
+    
+    
+    return true;
+}

@@ -13,8 +13,9 @@
 #include "cocos2d.h"
 
 #include "../Common/Constants.hpp"
-#include "GameRecord.hpp"
+//#include "GameRecord.hpp"
 #include "GameDefinition.hpp"
+#include "CharacterSprite.hpp"
 
 USING_NS_CC;
 
@@ -25,9 +26,9 @@ private:
     GameDefinition* _definition;
     Sprite* _baseSprite;
     
-    int[][] _characterIndexes;  // Map pointing to the corresponding character
+    int** _characterIndexes; // Map pointing to the corresponding character
     
-    Vector<PixelCharacter*>* _pixelCharacters;
+    Vector<CharacterSprite*>* _characterSprites;
     
     float _defaultStretchX;
 	float _defaultStretchY;
@@ -49,7 +50,10 @@ public:
     
     PixelPanel();
     PixelPanel(GameDefinition* def);
-    PixelPanel(GameRecord* record);
+    //PixelPanel(GameRecord* record);
+    
+    virtual ~PixelPanel();
+    
     
     void generatePixelCharacters();
     

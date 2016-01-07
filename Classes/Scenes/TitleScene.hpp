@@ -23,9 +23,12 @@ private:
     
 public:
     
+    static Scene* createScene();
+    
     virtual bool init();
     
-    
+    // implement the "static create()" method manually
+    CREATE_FUNC(TitleScene);
 };
 
 
