@@ -17,28 +17,22 @@
 
 USING_NS_CC;
 
-class ScentenceDefinition : public Ref
-{
-private:
-    
-    Vector<char*>* _characters;
-    
-public:
-    
-    ScentenceDefinition();
-    
-};
 
 class PoemDefinition : public Ref
 {
 private:
     
-    Vector<SentenceDefinition*>* _sentences;
+	char* _name;
+    Vector<CharacterId*>* _characterSequence;
     
+    Vector<CharacterId*>* _uniqueCharacters;
     
     
 public:
+
+    Vector<CharacterId*>* getCharacterSequence();
     
+    Vector<CharacterId*>* getUniqueCharacters();
     
     
 };

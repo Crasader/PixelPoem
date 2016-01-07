@@ -26,17 +26,20 @@ private:
     CharacterDefinition* _character;
     
     int _direction;
-    int _width;
-    int _height;
+    int _widthInUnit;
+    int _heightInUnit;
     
+	Vec2 _positionInUnit;
     
 public:
     
     PixelCharacter();
     PixelCharacter(CharacterDefinition* def);
     
+    static PixelCharacter* dummyValue();
     
-    
+	Vec2 getPositionInUnit();
+	void setPositionInUnit(Vec2 pos);
 };
 
 #endif /* PixelCharacter_hpp */

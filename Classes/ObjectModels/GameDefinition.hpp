@@ -16,6 +16,7 @@
 #include "../Common/Constants.hpp"
 #include "../Common/Types.hpp"
 #include "PoemDefinition.hpp"
+#include "PoemDiagram.hpp"
 
 USING_NS_CC;
 
@@ -23,22 +24,25 @@ class GameDefinition : public Ref
 {
 private:
     
-    ///
-    BYTE* _pixelMatrix;
+	///
+	PoemDiagram* _poemDiagram;
     
     ///
     PoemDefinition* _poemDefinition;
     
-    
+    Vector<CharacterId*>* _fuzzingCharacters;
     
     
 public:
     
-    GameDefinition();
+    static GameDefinition* loadFromFile(const char* filename);
+	
     GameDefinition(PoemDefinition* poem);
     GameDefinition();
     
-    
+	PoemDiagram* getPoemDiagram();
+	PoemDefinition* getPoemDefinition();
+    Vector<CharacterId*>* getFuzzingCharacters();
     
 };
 

@@ -25,18 +25,33 @@ private:
     GameDefinition* _definition;
     Sprite* _baseSprite;
     
-    int* _characterIndexes;  // Pointing to the corresponding character
+    int[][] _characterIndexes;  // Map pointing to the corresponding character
     
-    Vector<PixelCharacter*> _characters;
+    Vector<PixelCharacter*>* _pixelCharacters;
     
-    
+    float _defaultStretchX;
+	float _defaultStretchY;
+	
+	char* _defaultFont;
+	char* _defaultStyle;
+	
+	int _pixelUnitWidth;
+	int _pixelUnitHeight;
+	
+	int _maxUnitScaleX;
+	int _maxUnitScaleY;
+	
+	
+	
+	
+	
 public:
     
     PixelPanel();
     PixelPanel(GameDefinition* def);
     PixelPanel(GameRecord* record);
     
-    
+    void generatePixelCharacters();
     
 };
 
