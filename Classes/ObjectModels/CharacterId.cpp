@@ -7,3 +7,8 @@
 //
 
 #include "CharacterId.hpp"
+
+CharacterId::CharacterId(const char* id)
+{
+	_id = id;
+}

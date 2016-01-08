@@ -17,20 +17,31 @@
 
 USING_NS_CC;
 
+typedef enum CharacterRotateType
+{
+	CharacterRotate_None,
+	CharacterRotate_Left,
+	CharacterRotate_Right
+	
+} CharacterRotateType;
+
 class CharacterSprite : public Ref
 {
 private:
     
     CharacterTexture* _texture;
+	Texture2D* _rawTexture;
+	
     Vec2 _positionInUnit;
     
     int _widthInUnit;
     int _heightInUnit;
     
-    int _rotateStatus;
+    CharacterRotateType _rotate;
     
 public:
     
+    CharacterSprite(Texture2D* texture);
     CharacterSprite(CharacterTexture* texture);
     virtual ~CharacterSprite();
     
@@ -38,12 +49,7 @@ public:
     
     void setPositionInUnit(Vec2 pos);
     void setScale(int charWidth, int charHeight);
-    void setRotate(int rotate);
-    
-
-    
-    
-    
+    void setRotate(CharacterRotateType rotate);
     
 };
 

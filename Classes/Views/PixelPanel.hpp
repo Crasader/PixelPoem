@@ -43,6 +43,7 @@ private:
 	int _maxUnitScaleY;
 	
 	
+	void fillWithCharacters(Vector<CharacterId*>* characters);
 	
 	
 	
@@ -56,7 +57,7 @@ public:
     
     
     void generatePixelCharacters();
-    
+    void show(Node* parent);
 };
 
 #endif /* PixelPanel_hpp */

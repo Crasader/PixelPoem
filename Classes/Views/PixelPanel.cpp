@@ -14,6 +14,18 @@ PixelPanel::PixelPanel()
 {
 	_characterIndexes = NULL;
 	_characterSprites = new Vector<CharacterSprite*>();
+	
+	_pixelUnitWidth = 100;
+	_pixelUnitHeight = 100;
+	
+	_defaultStretchX = 1.0f;
+	_defaultStretchY = 1.0f;
+	
+	_defaultFont = "song";
+	_defaultStyle = "0";
+	
+	_maxUnitScaleX = 4;
+	_maxUnitScaleY = 4;
 }
 
 PixelPanel::~PixelPanel()
@@ -58,8 +70,56 @@ void PixelPanel::generatePixelCharacters()
 	_characterSprites->pushBack(CharacterSprite::dummyValue());
 	
 	// Step 1: Fill the valid characters
-	Vector<CharacterId*>* validCharacters = poemDefinition->getUniqueCharacters();
-    for(int j = 0; j < height; j++)
+    fillWithCharacters(poemDefinition->getUniqueCharacters());
+	
+	// Step 2: Fill the fuzzing characters
+	for(int j = 0; j < height; j++)
+	{
+		for(int i = 0; i < width; i++)
+		{
+			if (_characterIndexes[i][j] == -1)
+			{
+				_characterIndexes[i][j] = 0;
+			}
+		}
+	}
+	
+	fillWithCharacters(_definition->getFuzzingCharacters());
+}
+
+void PixelPanel::show(Node* parent)
+{
+	// Draw the characters on the base Sprite
+	_baseSprite = Sprite::create();
+	for(int i = 1; i < _characterSprites->size(); i++)	// Skip the dummyValue
+	{
+		CharacterSprite* character = _characterSprites->at(i);
+		Size size = character->getTextureSizeInPixel();
+		Size scaleInUnit = character->getScale();
+		CharacterRotateType rotateType = character->getRotateType();
+		Point positionInUnit = character->getPositionInUnit();
+		Sprite* sprite = character->getSprite();
+		
+		int widthBlank = max(0, (_pixelUnitWidth - size.width * _defaultStretchX) / 2);
+		int heightBlank = max(0, (_pixelUnitHeight - size.height * _defaultStretchY) / 2);
+		
+		int posX = (positionInUnit.x + scaleInUnit.width - 1) * _pixelUnitWidth / 2;
+		int posY = (positionInUnit.y + scaleInUnit.height - 1) * _pixelUnitHeight / 2;
+		
+		float scaleX = (_pixelUnitWidth * scaleInUnit.width - widthBlank * 2) / size.width;
+		float scaleY = (_pixelUnitHeight * scaleInUnit.height - heightBlank * 2) / size.height;
+		
+		sprite->setPosition(Vec2(posX, posY));
+		sprite->setScale(scaleX, scaleY);
+		_baseSprite->addChild(sprite, 0);
+	}
+	
+	parent->addChild(_baseSprite);
+}
+
+void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
+{
+	for(int j = 0; j < height; j++)
 	{
 		for(int i = 0; i < width; i++)
 		{
@@ -96,13 +156,13 @@ void PixelPanel::generatePixelCharacters()
 			}
 			int charHeight = MathUtils::GetRandomValue(1, validMaxHeight);
 			
-			CharacterId* characterId = validCharacters->at(MathUtils::GetRandomValue(0, (int)(validCharacters->size())));
+			CharacterId* characterId = characters->at(MathUtils::GetRandomValue(0, (int)(characters->size())));
 			
 			// Rotate only if the char is 1x1
-			int rotate = (charWidth == 1 && charHeight == 1) ? MathUtils::GetRandomValue(0,3) : 0;
+			int rotate = (charWidth == 1 && charHeight == 1) ? MathUtils::GetRandomValue(0, 3) : 0;
 			
 			// Put a random char with charWidth x charHeight
-            CharacterTexture* texture = new CharacterTexture(_defaultFont, _defaultStyle, characterId);
+            Texture2D* texture = ResourceLibrary::getInstance()->retrieveCharacterTextureRaw(font, style, characterId);
             CharacterSprite* character = new CharacterSprite(texture);
 			character->setPositionInUnit(Vec2(i,j));
 			character->setScale(charWidth, charHeight);
@@ -110,7 +170,6 @@ void PixelPanel::generatePixelCharacters()
 			
 			_characterSprites->pushBack(character);
 			
-            texture->release();
             character->release();
             
 			// Fill the character index
@@ -122,24 +181,6 @@ void PixelPanel::generatePixelCharacters()
 					_characterIndexes[i + w - 1][j + h -1] = charIndex;
 				}
 			}
-			
 		}
 	}
-	
-	
-	// Step 2: Fill the fuzzing characters
-	for(int j = 0; j < height; j++)
-	{
-		for(int i = 0; i < width; i++)
-		{
-			if (_characterIndexes[i][j] == -1)
-			{
-				_characterIndexes[i][j] = 0;
-			}
-		}
-	}
-	
-	Vector<CharacterId*>* invalidCharacters = _definition->getFuzzingCharacters();
-    
 }
-
