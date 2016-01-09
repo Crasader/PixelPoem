@@ -12,3 +12,12 @@ CharacterId::CharacterId(const char* id)
 {
 	_id = id;
 }
+
+CharacterId* CharacterId::create(const char* id)
+{
+	CharacterId* obj = new CharacterId(id);
+	
+	obj->autorelease();
+	
+	return obj;
+}

@@ -26,6 +26,7 @@ private:
     
 public:
     
+	static CharacterId* create(const char* id);
     CharacterId(const char* id);
     CharacterId(CharacterId* def);
     

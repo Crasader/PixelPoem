@@ -36,10 +36,13 @@ private:
 public:
     
     static GameDefinition* loadFromFile(const char* filename);
+	static GameDefinition* createSample();
 	
     GameDefinition(PoemDefinition* poem);
     GameDefinition();
     
+	void appendFuzzingCharacter(CharacterId* character);
+	
 	PoemDiagram* getPoemDiagram();
 	PoemDefinition* getPoemDefinition();
     Vector<CharacterId*>* getFuzzingCharacters();
