@@ -10,7 +10,8 @@
 
 CharacterId::CharacterId(const char* id)
 {
-	_id = id;
+    _id = new char[255];
+    strcpy(_id, id);
 }
 
 CharacterId* CharacterId::create(const char* id)

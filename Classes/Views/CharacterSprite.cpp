@@ -47,5 +47,30 @@ void CharacterSprite::setScale(int charWidth, int charHeight)
 
 void CharacterSprite::setRotate(CharacterRotateType rotate)
 {
-    _rotateStatus = rotate;
+    _rotateType = rotate;
+}
+
+Size CharacterSprite::getTextureSizeInPixel()
+{
+    return _rawTexture->getContentSizeInPixels();
+}
+
+Size CharacterSprite::getScale()
+{
+    return Size(_widthInUnit, _heightInUnit);
+}
+
+Vec2 CharacterSprite::getPositionInUnit()
+{
+    return _positionInUnit;
+}
+
+CharacterRotateType CharacterSprite::getRotateType()
+{
+    return _rotateType;
+}
+
+Sprite* CharacterSprite::getSprite()
+{
+    return _sprite;
 }

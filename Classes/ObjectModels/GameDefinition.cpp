@@ -39,7 +39,7 @@ GameDefinition* GameDefinition::createSample()
 	return definition;
 }
 	
-GameDefinition::appendFuzzingCharacter(CharacterId* character)
+void GameDefinition::appendFuzzingCharacter(CharacterId* character)
 {
 	for(int i = 0; i < _fuzzingCharacters->size(); i++)
 	{
@@ -49,5 +49,5 @@ GameDefinition::appendFuzzingCharacter(CharacterId* character)
 		}
 	}
 	
-	_fuzzingCharacters->pushBack(characterId);
+	_fuzzingCharacters->pushBack(character);
 }

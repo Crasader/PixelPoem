@@ -31,13 +31,14 @@ private:
     
     CharacterTexture* _texture;
 	Texture2D* _rawTexture;
-	
+    Sprite* _sprite;
+    
     Vec2 _positionInUnit;
     
     int _widthInUnit;
     int _heightInUnit;
     
-    CharacterRotateType _rotate;
+    CharacterRotateType _rotateType;
     
 public:
     
@@ -50,6 +51,12 @@ public:
     void setPositionInUnit(Vec2 pos);
     void setScale(int charWidth, int charHeight);
     void setRotate(CharacterRotateType rotate);
+    
+    Size getTextureSizeInPixel();
+    Size getScale();
+    Vec2 getPositionInUnit();
+    CharacterRotateType getRotateType();
+    Sprite* getSprite();
     
 };
 

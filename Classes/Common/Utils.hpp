@@ -20,6 +20,8 @@ class MathUtils : public Ref
 public:
     
     static int GetRandomValue(int min, int max);
+    static int Max(int a, int b);
+    static int Min(int a, int b);
     
 };
 

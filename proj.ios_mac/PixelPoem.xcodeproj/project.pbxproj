@@ -27,6 +27,52 @@
 		3C20AF941C3A70910020A540 /* PixelDiagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF921C3A70910020A540 /* PixelDiagram.cpp */; };
 		3C20AF991C3E6E900020A540 /* PoemDiagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF971C3E6E900020A540 /* PoemDiagram.cpp */; };
 		3C20AF9C1C3E79010020A540 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF9A1C3E79010020A540 /* Utils.cpp */; };
+		3C20AF9F1C40FA510020A540 /* ResourceLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF9D1C40FA510020A540 /* ResourceLibrary.cpp */; };
+		3C20AFAC1C41182B0020A540 /* poem_jingyesi.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 3C20AFAA1C41182B0020A540 /* poem_jingyesi.bmp */; };
+		3C20AFAD1C41182B0020A540 /* poem_jingyesi.pp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AFAB1C41182B0020A540 /* poem_jingyesi.pp */; };
+		3C20AFDA1C4118410020A540 /* song_0_chuang_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20AFAF1C4118410020A540 /* song_0_chuang_2_0.png */; };
+		3C20B0331C411BA30020A540 /* song_0_di_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0091C411BA30020A540 /* song_0_di_1_0.png */; };
+		3C20B0341C411BA30020A540 /* song_0_di_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00A1C411BA30020A540 /* song_0_di_4_0.png */; };
+		3C20B0351C411BA30020A540 /* song_0_gu_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00B1C411BA30020A540 /* song_0_gu_1_0.png */; };
+		3C20B0361C411BA30020A540 /* song_0_gu_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00C1C411BA30020A540 /* song_0_gu_3_0.png */; };
+		3C20B0371C411BA30020A540 /* song_0_gu_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00D1C411BA30020A540 /* song_0_gu_4_0.png */; };
+		3C20B0381C411BA30020A540 /* song_0_gu_4_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00E1C411BA30020A540 /* song_0_gu_4_1.png */; };
+		3C20B0391C411BA30020A540 /* song_0_guang_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00F1C411BA30020A540 /* song_0_guang_1_0.png */; };
+		3C20B03A1C411BA30020A540 /* song_0_hun_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0101C411BA30020A540 /* song_0_hun_1_0.png */; };
+		3C20B03B1C411BA30020A540 /* song_0_hun_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0111C411BA30020A540 /* song_0_hun_2_0.png */; };
+		3C20B03C1C411BA30020A540 /* song_0_jing_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0121C411BA30020A540 /* song_0_jing_4_0.png */; };
+		3C20B03D1C411BA30020A540 /* song_0_ju_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0131C411BA30020A540 /* song_0_ju_3_0.png */; };
+		3C20B03E1C411BA30020A540 /* song_0_kao_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0141C411BA30020A540 /* song_0_kao_3_0.png */; };
+		3C20B03F1C411BA30020A540 /* song_0_lv_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0151C411BA30020A540 /* song_0_lv_4_0.png */; };
+		3C20B0401C411BA30020A540 /* song_0_meng_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0161C411BA30020A540 /* song_0_meng_4_0.png */; };
+		3C20B0411C411BA30020A540 /* song_0_ming_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0171C411BA30020A540 /* song_0_ming_2_0.png */; };
+		3C20B0421C411BA30020A540 /* song_0_nian_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0181C411BA30020A540 /* song_0_nian_4_0.png */; };
+		3C20B0431C411BA30020A540 /* song_0_qian_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0191C411BA30020A540 /* song_0_qian_1_0.png */; };
+		3C20B0441C411BA30020A540 /* song_0_qian_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B01A1C411BA30020A540 /* song_0_qian_1_1.png */; };
+		3C20B0451C411BA30020A540 /* song_0_qian_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B01B1C411BA30020A540 /* song_0_qian_2_0.png */; };
+		3C20B0461C411BA30020A540 /* song_0_qian_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B01C1C411BA30020A540 /* song_0_qian_3_0.png */; };
+		3C20B0471C411BA30020A540 /* song_0_shang_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B01D1C411BA30020A540 /* song_0_shang_4_0.png */; };
+		3C20B0481C411BA30020A540 /* song_0_shei_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B01E1C411BA30020A540 /* song_0_shei_2_0.png */; };
+		3C20B0491C411BA30020A540 /* song_0_shen_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B01F1C411BA30020A540 /* song_0_shen_1_0.png */; };
+		3C20B04A1C411BA30020A540 /* song_0_shen_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0201C411BA30020A540 /* song_0_shen_1_1.png */; };
+		3C20B04B1C411BA30020A540 /* song_0_shi_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0211C411BA30020A540 /* song_0_shi_4_0.png */; };
+		3C20B04C1C411BA30020A540 /* song_0_shuang_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0221C411BA30020A540 /* song_0_shuang_1_0.png */; };
+		3C20B04D1C411BA30020A540 /* song_0_shui_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0231C411BA30020A540 /* song_0_shui_4_0.png */; };
+		3C20B04E1C411BA30020A540 /* song_0_si_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0241C411BA30020A540 /* song_0_si_1_0.png */; };
+		3C20B04F1C411BA30020A540 /* song_0_tian_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0251C411BA30020A540 /* song_0_tian_2_0.png */; };
+		3C20B0501C411BA30020A540 /* song_0_tou_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0261C411BA30020A540 /* song_0_tou_2_0.png */; };
+		3C20B0511C411BA30020A540 /* song_0_wang_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0271C411BA30020A540 /* song_0_wang_4_0.png */; };
+		3C20B0521C411BA30020A540 /* song_0_xiang_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0281C411BA30020A540 /* song_0_xiang_1_0.png */; };
+		3C20B0531C411BA30020A540 /* song_0_xiang_1_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0291C411BA30020A540 /* song_0_xiang_1_1.png */; };
+		3C20B0541C411BA30020A540 /* song_0_xiang_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B02A1C411BA30020A540 /* song_0_xiang_3_0.png */; };
+		3C20B0551C411BA30020A540 /* song_0_xiang_3_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B02B1C411BA30020A540 /* song_0_xiang_3_1.png */; };
+		3C20B0561C411BA30020A540 /* song_0_xiang_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B02C1C411BA30020A540 /* song_0_xiang_4_0.png */; };
+		3C20B0571C411BA30020A540 /* song_0_ye_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B02D1C411BA30020A540 /* song_0_ye_4_0.png */; };
+		3C20B0581C411BA30020A540 /* song_0_yi_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B02E1C411BA30020A540 /* song_0_yi_2_0.png */; };
+		3C20B0591C411BA30020A540 /* song_0_yue_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B02F1C411BA30020A540 /* song_0_yue_4_0.png */; };
+		3C20B05A1C411BA30020A540 /* song_0_zhi_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0301C411BA30020A540 /* song_0_zhi_1_0.png */; };
+		3C20B05B1C411BA30020A540 /* song_0_zhi_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0311C411BA30020A540 /* song_0_zhi_2_0.png */; };
+		3C20B05C1C411BA30020A540 /* song_0_zhi_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0321C411BA30020A540 /* song_0_zhi_3_0.png */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -154,6 +200,53 @@
 		3C20AF981C3E6E900020A540 /* PoemDiagram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PoemDiagram.hpp; path = ObjectModels/PoemDiagram.hpp; sourceTree = "<group>"; };
 		3C20AF9A1C3E79010020A540 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Utils.cpp; path = Common/Utils.cpp; sourceTree = "<group>"; };
 		3C20AF9B1C3E79010020A540 /* Utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Utils.hpp; path = Common/Utils.hpp; sourceTree = "<group>"; };
+		3C20AF9D1C40FA510020A540 /* ResourceLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResourceLibrary.cpp; path = ObjectModels/ResourceLibrary.cpp; sourceTree = "<group>"; };
+		3C20AF9E1C40FA510020A540 /* ResourceLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ResourceLibrary.hpp; path = ObjectModels/ResourceLibrary.hpp; sourceTree = "<group>"; };
+		3C20AFAA1C41182B0020A540 /* poem_jingyesi.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = poem_jingyesi.bmp; path = diagrams/poem_jingyesi.bmp; sourceTree = "<group>"; };
+		3C20AFAB1C41182B0020A540 /* poem_jingyesi.pp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = poem_jingyesi.pp; path = diagrams/poem_jingyesi.pp; sourceTree = "<group>"; };
+		3C20AFAF1C4118410020A540 /* song_0_chuang_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = song_0_chuang_2_0.png; path = ../Resources/chars/song/song_0_chuang_2_0.png; sourceTree = SOURCE_ROOT; };
+		3C20B0091C411BA30020A540 /* song_0_di_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_di_1_0.png; sourceTree = "<group>"; };
+		3C20B00A1C411BA30020A540 /* song_0_di_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_di_4_0.png; sourceTree = "<group>"; };
+		3C20B00B1C411BA30020A540 /* song_0_gu_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_gu_1_0.png; sourceTree = "<group>"; };
+		3C20B00C1C411BA30020A540 /* song_0_gu_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_gu_3_0.png; sourceTree = "<group>"; };
+		3C20B00D1C411BA30020A540 /* song_0_gu_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_gu_4_0.png; sourceTree = "<group>"; };
+		3C20B00E1C411BA30020A540 /* song_0_gu_4_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_gu_4_1.png; sourceTree = "<group>"; };
+		3C20B00F1C411BA30020A540 /* song_0_guang_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_guang_1_0.png; sourceTree = "<group>"; };
+		3C20B0101C411BA30020A540 /* song_0_hun_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_hun_1_0.png; sourceTree = "<group>"; };
+		3C20B0111C411BA30020A540 /* song_0_hun_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_hun_2_0.png; sourceTree = "<group>"; };
+		3C20B0121C411BA30020A540 /* song_0_jing_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_jing_4_0.png; sourceTree = "<group>"; };
+		3C20B0131C411BA30020A540 /* song_0_ju_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_ju_3_0.png; sourceTree = "<group>"; };
+		3C20B0141C411BA30020A540 /* song_0_kao_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_kao_3_0.png; sourceTree = "<group>"; };
+		3C20B0151C411BA30020A540 /* song_0_lv_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_lv_4_0.png; sourceTree = "<group>"; };
+		3C20B0161C411BA30020A540 /* song_0_meng_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_meng_4_0.png; sourceTree = "<group>"; };
+		3C20B0171C411BA30020A540 /* song_0_ming_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_ming_2_0.png; sourceTree = "<group>"; };
+		3C20B0181C411BA30020A540 /* song_0_nian_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_nian_4_0.png; sourceTree = "<group>"; };
+		3C20B0191C411BA30020A540 /* song_0_qian_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_qian_1_0.png; sourceTree = "<group>"; };
+		3C20B01A1C411BA30020A540 /* song_0_qian_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_qian_1_1.png; sourceTree = "<group>"; };
+		3C20B01B1C411BA30020A540 /* song_0_qian_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_qian_2_0.png; sourceTree = "<group>"; };
+		3C20B01C1C411BA30020A540 /* song_0_qian_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_qian_3_0.png; sourceTree = "<group>"; };
+		3C20B01D1C411BA30020A540 /* song_0_shang_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shang_4_0.png; sourceTree = "<group>"; };
+		3C20B01E1C411BA30020A540 /* song_0_shei_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shei_2_0.png; sourceTree = "<group>"; };
+		3C20B01F1C411BA30020A540 /* song_0_shen_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shen_1_0.png; sourceTree = "<group>"; };
+		3C20B0201C411BA30020A540 /* song_0_shen_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shen_1_1.png; sourceTree = "<group>"; };
+		3C20B0211C411BA30020A540 /* song_0_shi_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shi_4_0.png; sourceTree = "<group>"; };
+		3C20B0221C411BA30020A540 /* song_0_shuang_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shuang_1_0.png; sourceTree = "<group>"; };
+		3C20B0231C411BA30020A540 /* song_0_shui_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_shui_4_0.png; sourceTree = "<group>"; };
+		3C20B0241C411BA30020A540 /* song_0_si_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_si_1_0.png; sourceTree = "<group>"; };
+		3C20B0251C411BA30020A540 /* song_0_tian_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_tian_2_0.png; sourceTree = "<group>"; };
+		3C20B0261C411BA30020A540 /* song_0_tou_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_tou_2_0.png; sourceTree = "<group>"; };
+		3C20B0271C411BA30020A540 /* song_0_wang_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_wang_4_0.png; sourceTree = "<group>"; };
+		3C20B0281C411BA30020A540 /* song_0_xiang_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_xiang_1_0.png; sourceTree = "<group>"; };
+		3C20B0291C411BA30020A540 /* song_0_xiang_1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_xiang_1_1.png; sourceTree = "<group>"; };
+		3C20B02A1C411BA30020A540 /* song_0_xiang_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_xiang_3_0.png; sourceTree = "<group>"; };
+		3C20B02B1C411BA30020A540 /* song_0_xiang_3_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_xiang_3_1.png; sourceTree = "<group>"; };
+		3C20B02C1C411BA30020A540 /* song_0_xiang_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_xiang_4_0.png; sourceTree = "<group>"; };
+		3C20B02D1C411BA30020A540 /* song_0_ye_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_ye_4_0.png; sourceTree = "<group>"; };
+		3C20B02E1C411BA30020A540 /* song_0_yi_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_yi_2_0.png; sourceTree = "<group>"; };
+		3C20B02F1C411BA30020A540 /* song_0_yue_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_yue_4_0.png; sourceTree = "<group>"; };
+		3C20B0301C411BA30020A540 /* song_0_zhi_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_zhi_1_0.png; sourceTree = "<group>"; };
+		3C20B0311C411BA30020A540 /* song_0_zhi_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_zhi_2_0.png; sourceTree = "<group>"; };
+		3C20B0321C411BA30020A540 /* song_0_zhi_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_zhi_3_0.png; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -344,6 +437,8 @@
 		3C20AF681C3278E00020A540 /* ObjectModels */ = {
 			isa = PBXGroup;
 			children = (
+				3C20AF9D1C40FA510020A540 /* ResourceLibrary.cpp */,
+				3C20AF9E1C40FA510020A540 /* ResourceLibrary.hpp */,
 				3C20AF7C1C3281D40020A540 /* GameDefinition.cpp */,
 				3C20AF7D1C3281D40020A540 /* GameDefinition.hpp */,
 				3C20AF821C3284E60020A540 /* CharacterTexture.cpp */,
@@ -384,9 +479,79 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		3C20AFA81C4117FD0020A540 /* chars */ = {
+			isa = PBXGroup;
+			children = (
+				3C20AFAE1C4118350020A540 /* song */,
+			);
+			path = chars;
+			sourceTree = "<group>";
+		};
+		3C20AFA91C4118090020A540 /* diagrams */ = {
+			isa = PBXGroup;
+			children = (
+				3C20AFAA1C41182B0020A540 /* poem_jingyesi.bmp */,
+				3C20AFAB1C41182B0020A540 /* poem_jingyesi.pp */,
+			);
+			name = diagrams;
+			sourceTree = "<group>";
+		};
+		3C20AFAE1C4118350020A540 /* song */ = {
+			isa = PBXGroup;
+			children = (
+				3C20B0091C411BA30020A540 /* song_0_di_1_0.png */,
+				3C20B00A1C411BA30020A540 /* song_0_di_4_0.png */,
+				3C20B00B1C411BA30020A540 /* song_0_gu_1_0.png */,
+				3C20B00C1C411BA30020A540 /* song_0_gu_3_0.png */,
+				3C20B00D1C411BA30020A540 /* song_0_gu_4_0.png */,
+				3C20B00E1C411BA30020A540 /* song_0_gu_4_1.png */,
+				3C20B00F1C411BA30020A540 /* song_0_guang_1_0.png */,
+				3C20B0101C411BA30020A540 /* song_0_hun_1_0.png */,
+				3C20B0111C411BA30020A540 /* song_0_hun_2_0.png */,
+				3C20B0121C411BA30020A540 /* song_0_jing_4_0.png */,
+				3C20B0131C411BA30020A540 /* song_0_ju_3_0.png */,
+				3C20B0141C411BA30020A540 /* song_0_kao_3_0.png */,
+				3C20B0151C411BA30020A540 /* song_0_lv_4_0.png */,
+				3C20B0161C411BA30020A540 /* song_0_meng_4_0.png */,
+				3C20B0171C411BA30020A540 /* song_0_ming_2_0.png */,
+				3C20B0181C411BA30020A540 /* song_0_nian_4_0.png */,
+				3C20B0191C411BA30020A540 /* song_0_qian_1_0.png */,
+				3C20B01A1C411BA30020A540 /* song_0_qian_1_1.png */,
+				3C20B01B1C411BA30020A540 /* song_0_qian_2_0.png */,
+				3C20B01C1C411BA30020A540 /* song_0_qian_3_0.png */,
+				3C20B01D1C411BA30020A540 /* song_0_shang_4_0.png */,
+				3C20B01E1C411BA30020A540 /* song_0_shei_2_0.png */,
+				3C20B01F1C411BA30020A540 /* song_0_shen_1_0.png */,
+				3C20B0201C411BA30020A540 /* song_0_shen_1_1.png */,
+				3C20B0211C411BA30020A540 /* song_0_shi_4_0.png */,
+				3C20B0221C411BA30020A540 /* song_0_shuang_1_0.png */,
+				3C20B0231C411BA30020A540 /* song_0_shui_4_0.png */,
+				3C20B0241C411BA30020A540 /* song_0_si_1_0.png */,
+				3C20B0251C411BA30020A540 /* song_0_tian_2_0.png */,
+				3C20B0261C411BA30020A540 /* song_0_tou_2_0.png */,
+				3C20B0271C411BA30020A540 /* song_0_wang_4_0.png */,
+				3C20B0281C411BA30020A540 /* song_0_xiang_1_0.png */,
+				3C20B0291C411BA30020A540 /* song_0_xiang_1_1.png */,
+				3C20B02A1C411BA30020A540 /* song_0_xiang_3_0.png */,
+				3C20B02B1C411BA30020A540 /* song_0_xiang_3_1.png */,
+				3C20B02C1C411BA30020A540 /* song_0_xiang_4_0.png */,
+				3C20B02D1C411BA30020A540 /* song_0_ye_4_0.png */,
+				3C20B02E1C411BA30020A540 /* song_0_yi_2_0.png */,
+				3C20B02F1C411BA30020A540 /* song_0_yue_4_0.png */,
+				3C20B0301C411BA30020A540 /* song_0_zhi_1_0.png */,
+				3C20B0311C411BA30020A540 /* song_0_zhi_2_0.png */,
+				3C20B0321C411BA30020A540 /* song_0_zhi_3_0.png */,
+				3C20AFAF1C4118410020A540 /* song_0_chuang_2_0.png */,
+			);
+			name = song;
+			path = ../Resources/chars/song;
+			sourceTree = SOURCE_ROOT;
+		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C20AFA91C4118090020A540 /* diagrams */,
+				3C20AFA81C4117FD0020A540 /* chars */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -560,29 +725,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C20B05C1C411BA30020A540 /* song_0_zhi_3_0.png in Resources */,
+				3C20B04B1C411BA30020A540 /* song_0_shi_4_0.png in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				3C20B03D1C411BA30020A540 /* song_0_ju_3_0.png in Resources */,
+				3C20B04C1C411BA30020A540 /* song_0_shuang_1_0.png in Resources */,
+				3C20B0511C411BA30020A540 /* song_0_wang_4_0.png in Resources */,
+				3C20B04D1C411BA30020A540 /* song_0_shui_4_0.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				3C20B0421C411BA30020A540 /* song_0_nian_4_0.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				3C20B04E1C411BA30020A540 /* song_0_si_1_0.png in Resources */,
+				3C20B0481C411BA30020A540 /* song_0_shei_2_0.png in Resources */,
+				3C20B03A1C411BA30020A540 /* song_0_hun_1_0.png in Resources */,
+				3C20B0391C411BA30020A540 /* song_0_guang_1_0.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				3C20B03E1C411BA30020A540 /* song_0_kao_3_0.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				3C20B0341C411BA30020A540 /* song_0_di_4_0.png in Resources */,
+				3C20B05B1C411BA30020A540 /* song_0_zhi_2_0.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
+				3C20B0371C411BA30020A540 /* song_0_gu_4_0.png in Resources */,
+				3C20B0551C411BA30020A540 /* song_0_xiang_3_1.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				3C20B03F1C411BA30020A540 /* song_0_lv_4_0.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				3C20B0351C411BA30020A540 /* song_0_gu_1_0.png in Resources */,
+				3C20B0361C411BA30020A540 /* song_0_gu_3_0.png in Resources */,
+				3C20B0401C411BA30020A540 /* song_0_meng_4_0.png in Resources */,
+				3C20B0331C411BA30020A540 /* song_0_di_1_0.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				3C20B0541C411BA30020A540 /* song_0_xiang_3_0.png in Resources */,
+				3C20B0441C411BA30020A540 /* song_0_qian_1_1.png in Resources */,
+				3C20AFAC1C41182B0020A540 /* poem_jingyesi.bmp in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				3C20B04F1C411BA30020A540 /* song_0_tian_2_0.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				3C20B03B1C411BA30020A540 /* song_0_hun_2_0.png in Resources */,
+				3C20AFDA1C4118410020A540 /* song_0_chuang_2_0.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				3C20B0471C411BA30020A540 /* song_0_shang_4_0.png in Resources */,
+				3C20B0571C411BA30020A540 /* song_0_ye_4_0.png in Resources */,
+				3C20B0581C411BA30020A540 /* song_0_yi_2_0.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				3C20B0501C411BA30020A540 /* song_0_tou_2_0.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
+				3C20B03C1C411BA30020A540 /* song_0_jing_4_0.png in Resources */,
+				3C20B0411C411BA30020A540 /* song_0_ming_2_0.png in Resources */,
+				3C20B0381C411BA30020A540 /* song_0_gu_4_1.png in Resources */,
+				3C20B0591C411BA30020A540 /* song_0_yue_4_0.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				3C20B0531C411BA30020A540 /* song_0_xiang_1_1.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				3C20B0461C411BA30020A540 /* song_0_qian_3_0.png in Resources */,
+				3C20B0521C411BA30020A540 /* song_0_xiang_1_0.png in Resources */,
+				3C20B04A1C411BA30020A540 /* song_0_shen_1_1.png in Resources */,
+				3C20B0451C411BA30020A540 /* song_0_qian_2_0.png in Resources */,
+				3C20B05A1C411BA30020A540 /* song_0_zhi_1_0.png in Resources */,
+				3C20B0491C411BA30020A540 /* song_0_shen_1_0.png in Resources */,
+				3C20B0431C411BA30020A540 /* song_0_qian_1_0.png in Resources */,
+				3C20B0561C411BA30020A540 /* song_0_xiang_4_0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +825,7 @@
 				3C20AF7B1C3280C80020A540 /* Types.cpp in Sources */,
 				3C20AF8B1C3A70170020A540 /* PixelPanel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				3C20AFAD1C41182B0020A540 /* poem_jingyesi.pp in Sources */,
 				3C20AF941C3A70910020A540 /* PixelDiagram.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3C20AF781C3280320020A540 /* Constants.cpp in Sources */,
@@ -626,6 +836,7 @@
 				3C20AF871C3287150020A540 /* PoemDefinition.cpp in Sources */,
 				3C20AF7E1C3281D40020A540 /* GameDefinition.cpp in Sources */,
 				3C20AF6E1C32790E0020A540 /* MainGameScene.cpp in Sources */,
+				3C20AF9F1C40FA510020A540 /* ResourceLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

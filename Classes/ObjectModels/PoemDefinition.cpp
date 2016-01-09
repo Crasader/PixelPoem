@@ -66,6 +66,8 @@ PoemDefinition* PoemDefinition::createSample()
 	def->appendCharacter(CharacterId::create("si_1_0"));
 	def->appendCharacter(CharacterId::create("gu_4_0"));
 	def->appendCharacter(CharacterId::create("xiang_1_0"));
+    
+    return def;
 }
 
 void PoemDefinition::appendCharacter(CharacterId* character)
@@ -90,7 +92,7 @@ void PoemDefinition::appendCharacter(CharacterId* character)
 	
 	if (!hasChar)
 	{
-		_uniqueCharacters->pushBack(characterId);
+		_uniqueCharacters->pushBack(character);
 	}
 }
 

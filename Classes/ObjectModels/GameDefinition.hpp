@@ -40,6 +40,7 @@ public:
 	
     GameDefinition(PoemDefinition* poem);
     GameDefinition();
+    ~GameDefinition();
     
 	void appendFuzzingCharacter(CharacterId* character);
 	

@@ -9,6 +9,7 @@
 #include "PixelPanel.hpp"
 #include "CharacterSprite.hpp"
 #include "../Common/Utils.hpp"
+#include "../ObjectModels/ResourceLibrary.hpp"
 
 PixelPanel::PixelPanel()
 {
@@ -100,8 +101,8 @@ void PixelPanel::show(Node* parent)
 		Point positionInUnit = character->getPositionInUnit();
 		Sprite* sprite = character->getSprite();
 		
-		int widthBlank = max(0, (_pixelUnitWidth - size.width * _defaultStretchX) / 2);
-		int heightBlank = max(0, (_pixelUnitHeight - size.height * _defaultStretchY) / 2);
+        int widthBlank = MathUtils::Max(0, (_pixelUnitWidth - size.width * _defaultStretchX) / 2);
+		int heightBlank = MathUtils::Max(0, (_pixelUnitHeight - size.height * _defaultStretchY) / 2);
 		
 		int posX = (positionInUnit.x + scaleInUnit.width - 1) * _pixelUnitWidth / 2;
 		int posY = (positionInUnit.y + scaleInUnit.height - 1) * _pixelUnitHeight / 2;
@@ -119,6 +120,10 @@ void PixelPanel::show(Node* parent)
 
 void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 {
+    PoemDiagram* diagram = _definition->getPoemDiagram();
+    int width = diagram->getWidth();
+    int height = diagram->getHeight();
+    
 	for(int j = 0; j < height; j++)
 	{
 		for(int i = 0; i < width; i++)
@@ -162,11 +167,11 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 			int rotate = (charWidth == 1 && charHeight == 1) ? MathUtils::GetRandomValue(0, 3) : 0;
 			
 			// Put a random char with charWidth x charHeight
-            Texture2D* texture = ResourceLibrary::getInstance()->retrieveCharacterTextureRaw(font, style, characterId);
+            Texture2D* texture = ResourceLibrary::getInstance()->retrieveCharacterTextureRaw(_defaultFont.c_str(), _defaultStyle.c_str(), characterId);
             CharacterSprite* character = new CharacterSprite(texture);
 			character->setPositionInUnit(Vec2(i,j));
 			character->setScale(charWidth, charHeight);
-			character->setRotate(rotate);
+			character->setRotate((CharacterRotateType)rotate);
 			
 			_characterSprites->pushBack(character);
 			

@@ -25,7 +25,8 @@ public:
     
     virtual bool init();
     
-    
+    CREATE_FUNC(GamePanelLayer);
+
 };
 
 #endif /* GamePanelLayer_hpp */

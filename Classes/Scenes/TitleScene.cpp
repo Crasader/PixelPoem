@@ -8,6 +8,7 @@
 
 #include "TitleScene.hpp"
 #include "SelectStageScene.hpp"
+#include "MainGameScene.hpp"
 
 Scene* TitleScene::createScene()
 {
@@ -66,7 +67,9 @@ bool TitleScene::init()
     //this->addChild(label, 1);
     
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    // auto sprite = Sprite::create("ui/iphone6p/Button_Start.png");
+    // auto sprite = Sprite::create("Button_Start.png");
+    auto sprite = Sprite::create("res/ui/iphone6p/Button_Start.png");
     
     // position the sprite on the center of the screen
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -85,7 +88,8 @@ void TitleScene::buttonStartCallback(Ref* pSender)
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = SelectStageScene::create();
+    // auto layer = SelectStageScene::create();
+    auto layer = MainGameScene::createScene(0);
     
     // add layer as a child to scene
     scene->addChild(layer);
