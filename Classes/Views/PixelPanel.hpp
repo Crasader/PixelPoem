@@ -54,9 +54,11 @@ public:
     
     virtual ~PixelPanel();
     
-    
     void generatePixelCharacters();
     void show(Node* parent);
+    void setPosition(const Vec2& pos);
+  
+    Sprite* getSprite();
 };
 
 #endif /* PixelPanel_hpp */

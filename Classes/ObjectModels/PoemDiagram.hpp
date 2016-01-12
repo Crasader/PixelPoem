@@ -17,6 +17,26 @@
 
 USING_NS_CC;
 
+class PixelColor : public Ref
+{
+private:
+    
+    char _red;
+    char _green;
+    char _blue;
+    
+public:
+    
+    PixelColor();
+    PixelColor(char r, char g, char b);
+    
+    char getRed();
+    char getGreen();
+    char getBlue();
+    
+    bool isBlack();
+};
+
 
 class PoemDiagram : public Ref
 {
@@ -27,7 +47,7 @@ private:
 	int _diagramWidth;
 	int _diagramHeight;
 	
-	int* _data;
+	PixelColor** _data;
     
     
 public:
@@ -35,7 +55,14 @@ public:
 	static PoemDiagram* loadByName(const char* name);
     static PoemDiagram* loadFromFile(const char* diagram_file);
     
-	int getValue(int i, int j);
+    PoemDiagram(int w, int h);
+    
+    void setColor(int x, int y, PixelColor* color);
+                  
+    // void setWidth(int w);
+    // void setHeight(int h);
+    
+	PixelColor* getValue(int i, int j);
     int getWidth();
 	int getHeight();
 	

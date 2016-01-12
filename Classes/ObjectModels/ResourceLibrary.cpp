@@ -45,7 +45,7 @@ void ResourceLibrary::loadCharacterTextures()
 Texture2D* ResourceLibrary::retrieveCharacterTextureRaw(const char* font, const char* style, CharacterId* charId)
 {
 	char textureFileName[255];
-	sprintf(textureFileName, "chars\\%s\\%s_%s_%s.png", font, style, charId->getId());
+	sprintf(textureFileName, "res/chars/%s/%s_%s_%s.png", font, font, style, charId->getId());
 	
 	auto texture = Director::getInstance()->getTextureCache()->addImage(textureFileName);
     
@@ -55,7 +55,7 @@ Texture2D* ResourceLibrary::retrieveCharacterTextureRaw(const char* font, const 
 CharacterTexture* ResourceLibrary::retrieveCharacterTexture(const char* font, const char* style, CharacterId* charId)
 {
 	char textureFileName[255];
-	sprintf(textureFileName, "chars\\%s\\%s_%s_%s.png", font, style, charId->getId());
+	sprintf(textureFileName, "res/chars/%s/%s_%s_%s.png", font, font, style, charId->getId());
 	
 	auto texture = Director::getInstance()->getTextureCache()->addImage(textureFileName);
     

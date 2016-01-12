@@ -21,6 +21,9 @@ CharacterSprite::CharacterSprite(Texture2D* texture)
     _rawTexture = texture;
     _rawTexture->retain();
 	
+    _sprite = Sprite::createWithTexture(texture);
+    _sprite->retain();
+    
 	_texture = NULL;
 }
 
@@ -32,6 +35,15 @@ CharacterSprite::~CharacterSprite()
 	if(_rawTexture != NULL)
 		_rawTexture->release();
 
+}
+
+CharacterSprite* CharacterSprite::dummyValue()
+{
+    Texture2D* texture = Director::getInstance()->getTextureCache()->addImage("CloseNormal.png");
+    CharacterSprite* sprite = new CharacterSprite(texture);
+    sprite->autorelease();
+    
+    return sprite;
 }
 
 void CharacterSprite::setPositionInUnit(Vec2 pos)

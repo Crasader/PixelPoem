@@ -22,3 +22,13 @@ CharacterId* CharacterId::create(const char* id)
 	
 	return obj;
 }
+
+const char* CharacterId::getId()
+{
+    return _id;
+}
+
+bool CharacterId::isSame(CharacterId* another)
+{
+    return (strcmp(_id, another->getId()) == 0);
+}

@@ -16,17 +16,38 @@ PixelPanel::PixelPanel()
 	_characterIndexes = NULL;
 	_characterSprites = new Vector<CharacterSprite*>();
 	
-	_pixelUnitWidth = 100;
-	_pixelUnitHeight = 100;
+	_pixelUnitWidth = 30;
+	_pixelUnitHeight = 30;
 	
-	_defaultStretchX = 1.0f;
-	_defaultStretchY = 1.0f;
+	_defaultStretchX = 0.3f;
+	_defaultStretchY = 0.3f;
 	
 	_defaultFont = "song";
 	_defaultStyle = "0";
 	
 	_maxUnitScaleX = 4;
 	_maxUnitScaleY = 4;
+}
+
+PixelPanel::PixelPanel(GameDefinition* def)
+{
+    _definition = def;
+    _definition->retain();
+    
+    _characterIndexes = NULL;
+    _characterSprites = new Vector<CharacterSprite*>();
+    
+    _pixelUnitWidth = 30;
+    _pixelUnitHeight = 30;
+    
+    _defaultStretchX = 0.25f;
+    _defaultStretchY = 0.25f;
+    
+    _defaultFont = "song";
+    _defaultStyle = "0";
+    
+    _maxUnitScaleX = 4;
+    _maxUnitScaleY = 4;
 }
 
 PixelPanel::~PixelPanel()
@@ -51,8 +72,9 @@ void PixelPanel::generatePixelCharacters()
     {
         _characterIndexes[i] = new int[height];
         for(int j = 0; j < height; j++)
-            {
-			if (diagram->getValue(i, j) == 0)
+        {
+            PixelColor* clr = diagram->getValue(i, j);
+			if (clr->isBlack())
 			{
 				// Fill with Valid characters
 				_characterIndexes[i][j] = 0;
@@ -116,6 +138,7 @@ void PixelPanel::show(Node* parent)
 	}
 	
 	parent->addChild(_baseSprite);
+    _baseSprite->retain();
 }
 
 void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
@@ -161,7 +184,7 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 			}
 			int charHeight = MathUtils::GetRandomValue(1, validMaxHeight);
 			
-			CharacterId* characterId = characters->at(MathUtils::GetRandomValue(0, (int)(characters->size())));
+			CharacterId* characterId = characters->at(MathUtils::GetRandomValue(0, (int)(characters->size() - 1)));
 			
 			// Rotate only if the char is 1x1
 			int rotate = (charWidth == 1 && charHeight == 1) ? MathUtils::GetRandomValue(0, 3) : 0;
@@ -188,4 +211,14 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 			}
 		}
 	}
+}
+
+void PixelPanel::setPosition(const Vec2& pos)
+{
+    _baseSprite->setPosition(pos);
+}
+
+Sprite* PixelPanel::getSprite()
+{
+    return _baseSprite;
 }

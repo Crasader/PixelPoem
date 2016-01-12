@@ -11,7 +11,8 @@
 
 int MathUtils::GetRandomValue(int min, int max)
 {
-    return max;
+    assert(min <= max);
+    return rand() % (max - min + 1) + min;
 }
 
 int MathUtils::Max(int a, int b)

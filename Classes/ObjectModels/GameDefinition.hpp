@@ -38,7 +38,7 @@ public:
     static GameDefinition* loadFromFile(const char* filename);
 	static GameDefinition* createSample();
 	
-    GameDefinition(PoemDefinition* poem);
+    GameDefinition(PoemDefinition* poem, PoemDiagram* diagram);
     GameDefinition();
     ~GameDefinition();
     
