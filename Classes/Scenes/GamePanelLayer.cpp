@@ -21,13 +21,13 @@ bool GamePanelLayer::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto sprite = Sprite::create("res/ui/iphone6p/MainGameMask2.png");
+    auto mask = Sprite::create("res/ui/iphone6p/MainGameMask2.png");
+    mask->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(mask, 100);
     
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 100);
+    auto background = Sprite::create("res/ui/iphone6p/MainGameBackground.png");
+    background->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    this->addChild(background, -100);
     
     // Adding PixelPanel
     GameDefinition* def = GameDefinition::createSample();

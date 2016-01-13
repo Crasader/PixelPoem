@@ -15,7 +15,7 @@ PixelColor::PixelColor()
 {
 }
 
-PixelColor::PixelColor(char r, char g, char b)
+PixelColor::PixelColor(unsigned char r, unsigned char g, unsigned char b)
 {
     _red = r;
     _green = g;
@@ -91,22 +91,22 @@ int PoemDiagram::getHeight()
     return _diagramHeight;
 }
 
-char PixelColor::getRed()
+unsigned char PixelColor::getRed()
 {
     return _red;
 }
 
-char PixelColor::getGreen()
+unsigned char PixelColor::getGreen()
 {
     return _green;
 }
 
-char PixelColor::getBlue()
+unsigned char PixelColor::getBlue()
 {
     return _blue;
 }
 
 bool PixelColor::isBlack()
 {
-    return (_red < 127 || _green < 127 || _blue < 127);
+    return (_red < 127 && _green < 127 && _blue < 127);
 }

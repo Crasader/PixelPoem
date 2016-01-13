@@ -21,18 +21,18 @@ class PixelColor : public Ref
 {
 private:
     
-    char _red;
-    char _green;
-    char _blue;
+    unsigned char _red;
+    unsigned char _green;
+    unsigned char _blue;
     
 public:
     
     PixelColor();
-    PixelColor(char r, char g, char b);
+    PixelColor(unsigned char r, unsigned char g, unsigned char b);
     
-    char getRed();
-    char getGreen();
-    char getBlue();
+    unsigned char getRed();
+    unsigned char getGreen();
+    unsigned char getBlue();
     
     bool isBlack();
 };
