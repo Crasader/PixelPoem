@@ -21,7 +21,7 @@ bool GamePanelLayer::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto mask = Sprite::create("res/ui/iphone6p/MainGameMask2.png");
+    auto mask = Sprite::create("res/ui/iphone6p/MainGameMask.png");
     mask->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     this->addChild(mask, 100);
     
@@ -58,12 +58,20 @@ bool GamePanelLayer::onTouchBegan(Touch* touch, Event* event)
     Point currentLocation = _pixelPanel->getSprite()->getPosition();
     _touchOffset = Vec2(touchLocation.x - currentLocation.x, touchLocation.y - currentLocation.y);
     
+    _touchHasMoved = false;
     return true;
 }
 
 void GamePanelLayer::onTouchEnded(Touch* touch, Event* event)
 {
     cocos2d::log("touch ended");
+    if (_touchHasMoved)
+    {
+        return;
+    }
+    
+    _pixelPanel->onClicked(_touchOffset);
+    
 }
 
 void GamePanelLayer::onTouchMoved(Touch* touch, Event* event)
@@ -72,7 +80,7 @@ void GamePanelLayer::onTouchMoved(Touch* touch, Event* event)
     
     Point touchLocation = touch->getLocation();
     _pixelPanel->getSprite()->setPosition(touchLocation.x - _touchOffset.x, touchLocation.y - _touchOffset.y);
-    
+    _touchHasMoved = true;
 }
 
 void GamePanelLayer::onTouchCancelled(Touch* touch, Event* event)

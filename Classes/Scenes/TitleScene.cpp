@@ -33,6 +33,10 @@ bool TitleScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    Size winSize = Director::getInstance()->getWinSize();
+    Size winSizePixel = Director::getInstance()->getWinSizeInPixels();
+    float pixelScale = winSizePixel.width / winSize.width;
+    
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
@@ -76,6 +80,28 @@ bool TitleScene::init()
     
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+    
+    
+    auto sample = Sprite::create("res/samples/sample_100_100_100dpi.png");
+    sample->setPosition(Vec2(0 + origin.x, 0 + origin.y));
+    Size size = sample->getTexture()->getContentSize();
+    Size sizepixel = sample->getTexture()->getContentSizeInPixels();
+    sample->setScale(pixelScale, pixelScale);
+    sample->setAnchorPoint(Vec2(0, 0));
+    this->addChild(sample, 0);
+    
+    auto sample2 = Sprite::create("res/samples/sample_100_100_300dpi.png");
+    sample2->setPosition(Vec2(100 + origin.x, 100 + origin.y));
+    sample2->setAnchorPoint(Vec2(0, 0));
+    sample2->setScale(pixelScale, pixelScale);
+    this->addChild(sample2, 0);
+    size = sample->getTexture()->getContentSize();
+    sizepixel = sample->getTexture()->getContentSizeInPixels();
+    
+
+    auto sample3 = Sprite::create("res/samples/sample_100_100_300dpi.png");
+    sample3->setPosition(Vec2(200, 200));
+    this->addChild(sample3, 0);
     
     return true;
 }

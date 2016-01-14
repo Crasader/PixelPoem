@@ -27,8 +27,11 @@ private:
     void onTouchMoved(Touch* touch, Event* event);
     void onTouchCancelled(Touch* touch, Event* event);
 
+    bool _touchHasMoved;
+    
     Vec2 _touchOffset;
     PixelPanel* _pixelPanel;
+    
     
 public:
     

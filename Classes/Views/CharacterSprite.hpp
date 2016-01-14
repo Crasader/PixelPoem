@@ -30,7 +30,7 @@ class CharacterSprite : public Ref
 private:
     
     CharacterTexture* _texture;
-	Texture2D* _rawTexture;
+	// Texture2D* _rawTexture;
     Sprite* _sprite;
     
     Vec2 _positionInUnit;
@@ -52,12 +52,16 @@ public:
     void setScale(int charWidth, int charHeight);
     void setRotate(CharacterRotateType rotate);
     
-    Size getTextureSizeInPixel();
+    CharacterTexture* getTexture();
+    Size getTextureSize();
     Size getScale();
     Vec2 getPositionInUnit();
     CharacterRotateType getRotateType();
     Sprite* getSprite();
     
+    bool isSame(CharacterSprite* another);
+    
+    void flip(float delayTime);
 };
 
 #endif /* CharacterSprite_hpp */

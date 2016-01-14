@@ -16,8 +16,8 @@ PixelPanel::PixelPanel()
 	_characterIndexes = NULL;
 	_characterSprites = new Vector<CharacterSprite*>();
 	
-	_pixelUnitWidth = 30;
-	_pixelUnitHeight = 30;
+	_unitWidth = 30;
+	_unitHeight = 30;
 	
 	_defaultStretchX = 0.3f;
 	_defaultStretchY = 0.3f;
@@ -37,8 +37,8 @@ PixelPanel::PixelPanel(GameDefinition* def)
     _characterIndexes = NULL;
     _characterSprites = new Vector<CharacterSprite*>();
     
-    _pixelUnitWidth = 5;
-    _pixelUnitHeight = 5;
+    _unitWidth = 16;
+    _unitHeight = 16;
     
     _defaultStretchX = 0.25f;
     _defaultStretchY = 0.25f;
@@ -46,8 +46,8 @@ PixelPanel::PixelPanel(GameDefinition* def)
     _defaultFont = "song";
     _defaultStyle = "0";
     
-    _maxUnitScaleX = 6;
-    _maxUnitScaleY = 6;
+    _maxUnitScaleX = 4;
+    _maxUnitScaleY = 4;
 }
 
 PixelPanel::~PixelPanel()
@@ -107,39 +107,39 @@ void PixelPanel::generatePixelCharacters()
 		}
 	}
 	
-	// fillWithCharacters(_definition->getFuzzingCharacters());
+	fillWithCharacters(_definition->getFuzzingCharacters());
 }
 
 void PixelPanel::show(Node* parent)
 {
     PoemDiagram* diagram = _definition->getPoemDiagram();
-    int totalHeightPixel = _pixelUnitHeight * diagram->getHeight();
+    int totalHeight = _unitHeight * diagram->getHeight();
     
 	// Draw the characters on the base Sprite
 	_baseSprite = Sprite::create();
 	for(int i = 1; i < _characterSprites->size(); i++)	// Skip the dummyValue
 	{
 		CharacterSprite* character = _characterSprites->at(i);
-		Size size = character->getTextureSizeInPixel();
+		Size size = character->getTextureSize();
 		Size scaleInUnit = character->getScale();
 		CharacterRotateType rotateType = character->getRotateType();
 		Point positionInUnit = character->getPositionInUnit();
 		Sprite* sprite = character->getSprite();
 		
-        int widthBlank = MathUtils::Max(0, (_pixelUnitWidth - size.width) / 2);
-		int heightBlank = MathUtils::Max(0, (_pixelUnitHeight - size.height) / 2);
+        // int widthBlank = MathUtils::Max(0, (_pixelUnitWidth - size.width) / 2);
+		// int heightBlank = MathUtils::Max(0, (_pixelUnitHeight - size.height) / 2);
 		
-        widthBlank = 0;
-        heightBlank = 0;
+        int widthBlank = 0;
+        int heightBlank = 0;
         
-		int posX = positionInUnit.x * _pixelUnitWidth + (scaleInUnit.width + 1) * _pixelUnitWidth / 2;
-		int posY = totalHeightPixel - positionInUnit.y * _pixelUnitHeight - (scaleInUnit.height + 1) * _pixelUnitHeight / 2;
+		int posX = positionInUnit.x * _unitWidth + (scaleInUnit.width + 1) * _unitWidth / 2;
+		int posY = totalHeight - positionInUnit.y * _unitHeight - (scaleInUnit.height + 1) * _unitHeight / 2;
 		
-        posX /= 2;
-        posY /= 2;
+        // posX /= 2;
+        // posY /= 2;
         
-		float scaleX = (_pixelUnitWidth * scaleInUnit.width - widthBlank * 2) / size.width;
-		float scaleY = (_pixelUnitHeight * scaleInUnit.height - heightBlank * 2) / size.height;
+		float scaleX = (_unitWidth * scaleInUnit.width - widthBlank * 2) / size.width;
+		float scaleY = (_unitHeight * scaleInUnit.height - heightBlank * 2) / size.height;
 		
 		sprite->setPosition(Vec2(posX, posY));
 		sprite->setScale(scaleX, scaleY);
@@ -183,13 +183,20 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 				{
 					break;
 				}
+                
+                bool hasConflict = false;
 				for(int w = 1; w <= charWidth; w++)
 				{
 					if(_characterIndexes[i + w - 1][j + h -1] != 0)
 					{
+                        hasConflict = true;
 						break;
 					}
 				}
+                
+                if (hasConflict)
+                    break;
+                
 				validMaxHeight = h;
 			}
 			int charHeight = MathUtils::GetRandomValue(1, validMaxHeight);
@@ -200,7 +207,7 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 			int rotate = (charWidth == 1 && charHeight == 1) ? MathUtils::GetRandomValue(0, 3) : 0;
 			
 			// Put a random char with charWidth x charHeight
-            Texture2D* texture = ResourceLibrary::getInstance()->retrieveCharacterTextureRaw(_defaultFont.c_str(), _defaultStyle.c_str(), characterId);
+            CharacterTexture* texture = ResourceLibrary::getInstance()->retrieveCharacterTexture(_defaultFont.c_str(), _defaultStyle.c_str(), characterId);
             CharacterSprite* character = new CharacterSprite(texture);
 			character->setPositionInUnit(Vec2(i, j));
 			character->setScale(charWidth, charHeight);
@@ -224,6 +231,24 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 	}
 }
 
+void PixelPanel::onClicked(Vec2& pos)
+{
+    PoemDiagram* diagram = _definition->getPoemDiagram();
+    int totalHeight = _unitHeight * diagram->getHeight();
+    int totalWidth = _unitWidth * diagram->getWidth();
+    
+    if (pos.x < 0 || pos.x > totalWidth || pos.y < 0 || pos.y > totalHeight)
+    {
+        // Clicked on the outside
+        return;
+    }
+    
+    int unitX = pos.x / _unitWidth;
+    int unitY = (totalHeight - pos.y) / _unitHeight;
+    
+    flipCharacter(_characterIndexes[unitX][unitY]);
+}
+
 void PixelPanel::setPosition(const Vec2& pos)
 {
     _baseSprite->setPosition(pos);
@@ -232,4 +257,26 @@ void PixelPanel::setPosition(const Vec2& pos)
 Sprite* PixelPanel::getSprite()
 {
     return _baseSprite;
+}
+
+void PixelPanel::flipCharacter(int charIndex)
+{
+    CharacterSprite* centerCharacter = _characterSprites->at(charIndex);
+    Vec2 centerPos = centerCharacter->getPositionInUnit();
+    
+    for(int i = 0 ; i < _characterSprites->size(); i++)
+    {
+        CharacterSprite* character = _characterSprites->at(i);
+        if (!character->isSame(centerCharacter))
+        {
+            continue;
+        }
+        
+        Vec2 pos = character->getPositionInUnit();
+        float distance = std::abs(pos.x - centerPos.x) + std::abs(pos.y - centerPos.y);
+        
+        character->flip(distance * 0.03f);
+        
+    }
+    
 }

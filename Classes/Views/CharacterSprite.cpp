@@ -10,37 +10,29 @@
 
 CharacterSprite::CharacterSprite(CharacterTexture* texture)
 {
-    _texture = texture;
-    _texture->retain();
-	
-	_rawTexture = NULL;
-}
-
-CharacterSprite::CharacterSprite(Texture2D* texture)
-{
-    _rawTexture = texture;
-    _rawTexture->retain();
-	
-    _sprite = Sprite::createWithTexture(texture);
-    _sprite->retain();
-    
-	_texture = NULL;
+    if (texture != nullptr)
+    {
+        _texture = texture;
+        _texture->retain();
+        
+        if(texture->getTexture() != nullptr)
+        {
+            _sprite = Sprite::createWithTexture(texture->getTexture());
+            _sprite->retain();
+        }
+    }
 }
 
 CharacterSprite::~CharacterSprite()
 {
 	if(_texture != NULL)
 		_texture->release();
-
-	if(_rawTexture != NULL)
-		_rawTexture->release();
-
 }
 
 CharacterSprite* CharacterSprite::dummyValue()
 {
-    Texture2D* texture = Director::getInstance()->getTextureCache()->addImage("CloseNormal.png");
-    CharacterSprite* sprite = new CharacterSprite(texture);
+    CharacterTexture* charTexture = CharacterTexture::dummyValue();
+    CharacterSprite* sprite = new CharacterSprite(charTexture);
     sprite->autorelease();
     
     return sprite;
@@ -62,9 +54,9 @@ void CharacterSprite::setRotate(CharacterRotateType rotate)
     _rotateType = rotate;
 }
 
-Size CharacterSprite::getTextureSizeInPixel()
+Size CharacterSprite::getTextureSize()
 {
-    return _rawTexture->getContentSizeInPixels();
+    return _texture->getTexture()->getContentSize();
 }
 
 Size CharacterSprite::getScale()
@@ -85,4 +77,37 @@ CharacterRotateType CharacterSprite::getRotateType()
 Sprite* CharacterSprite::getSprite()
 {
     return _sprite;
+}
+
+CharacterTexture* CharacterSprite::getTexture()
+{
+    return _texture;
+}
+
+bool CharacterSprite::isSame(CharacterSprite* another)
+{
+    if (_texture->getCharacterId() == nullptr)
+        return false;
+    
+    return (_texture->getCharacterId()->isSame(another->getTexture()->getCharacterId()));
+}
+
+void CharacterSprite::flip(float delayTime)
+{
+    if (_sprite == nullptr)
+        return;
+    
+    int opacity = 300 - _sprite->getOpacity();
+    float curScaleX = _sprite->getScaleX();
+    float curScaleY = _sprite->getScaleY();
+    
+    auto delay = DelayTime::create(delayTime);
+    auto scale1 = ScaleTo::create(0.3f, 0.01f, curScaleY);
+    auto fade = FadeTo::create(0, opacity);
+    auto scale2 = ScaleTo::create(0.3f, curScaleX, curScaleY);
+    
+    auto sequence = Sequence::create(delay, scale1, fade, scale2, nullptr);
+    _sprite->runAction(sequence);
+    
+    
 }

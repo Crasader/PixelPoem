@@ -28,15 +28,20 @@ private:
     
     CharacterId* _characterId;
     
+    Texture2D* _texture;
     
 public:
     
     CharacterTexture(const char* font, const char* style, CharacterId* id);
-    
     CharacterTexture();
+    ~CharacterTexture();
     CharacterTexture(CharacterTexture* def);
     
+    static CharacterTexture* dummyValue();
     
+    
+    CharacterId* getCharacterId();
+    Texture2D* getTexture();
     
 };
 #endif /* CharacterTexture.hpp */

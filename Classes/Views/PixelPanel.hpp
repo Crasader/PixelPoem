@@ -36,15 +36,15 @@ private:
     std::string _defaultFont;
 	std::string _defaultStyle;
 	
-	int _pixelUnitWidth;
-	int _pixelUnitHeight;
+	int _unitWidth;
+	int _unitHeight;
 	
 	int _maxUnitScaleX;
 	int _maxUnitScaleY;
 	
 	void fillWithCharacters(Vector<CharacterId*>* characters);
 	
-	
+    void flipCharacter(int charIndex);
 	
 public:
     
@@ -59,6 +59,9 @@ public:
     void setPosition(const Vec2& pos);
   
     Sprite* getSprite();
+    
+    void onClicked(Vec2& pos);
+    
 };
 
 #endif /* PixelPanel_hpp */
