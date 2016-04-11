@@ -42,10 +42,14 @@ private:
 	int _maxUnitScaleX;
 	int _maxUnitScaleY;
 	
+    bool _isControllable;
+    
 	void fillWithCharacters(Vector<CharacterId*>* characters);
 	
     void flipCharacter(int charIndex);
 	
+    void setControllableState(bool state);
+    
 public:
     
     PixelPanel();

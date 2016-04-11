@@ -149,6 +149,13 @@ void PixelPanel::show(Node* parent)
 	
 	parent->addChild(_baseSprite);
     _baseSprite->retain();
+    
+    setControllableState(true);
+}
+
+void PixelPanel::setControllableState(bool state)
+{
+    this->_isControllable = state;
 }
 
 void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
@@ -233,6 +240,12 @@ void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 
 void PixelPanel::onClicked(Vec2& pos)
 {
+    if (!this->_isControllable) {
+        
+        log("The Panel is not in Controllable state, skip the touch.");
+        return;
+    }
+    
     PoemDiagram* diagram = _definition->getPoemDiagram();
     int totalHeight = _unitHeight * diagram->getHeight();
     int totalWidth = _unitWidth * diagram->getWidth();
@@ -261,9 +274,12 @@ Sprite* PixelPanel::getSprite()
 
 void PixelPanel::flipCharacter(int charIndex)
 {
+    setControllableState(false);
+    
     CharacterSprite* centerCharacter = _characterSprites->at(charIndex);
     Vec2 centerPos = centerCharacter->getPositionInUnit();
     
+    float longestDelayTime = 0.0f;
     for(int i = 0 ; i < _characterSprites->size(); i++)
     {
         CharacterSprite* character = _characterSprites->at(i);
@@ -274,9 +290,17 @@ void PixelPanel::flipCharacter(int charIndex)
         
         Vec2 pos = character->getPositionInUnit();
         float distance = std::abs(pos.x - centerPos.x) + std::abs(pos.y - centerPos.y);
+        float delayTime = distance * 0.03f;
+        character->flip(delayTime);
         
-        character->flip(distance * 0.03f);
-        
+        longestDelayTime = MAX(delayTime, longestDelayTime);
     }
     
+    auto delay = DelayTime::create(longestDelayTime);
+    auto callfunc = CallFunc::create([&]() { this->setControllableState(true); } );
+    auto sequence = Sequence::create(delay, callfunc, nullptr);
+    _baseSprite->runAction(sequence);
+    
 }
+
+
