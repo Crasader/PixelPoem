@@ -1,0 +1,13 @@
+tiliandi
+
+4
+ti 2 0 lin 2 0 an 1 0 di 3 0
+2
+lin 2 0 sheng 1 0
+
+4 7
+shan 1 0 wai 4 0 qing 1 0 shan 1 0 lou 2 0 wai 4 0 lou 2 0
+xi 1 0 hu 2 0 ge 1 0 wu 3 0 ji 3 0 shi 2 0 xiu 1 0
+nuan 3 0 feng 1 0 xun 1 0 de 2 0 you 2 0 ren 2 0 zui 4 0
+zhi 2 0 ba 3 0 hang 2 0 zhou 1 0 zuo 4 0 bian 4 0 zhou 1 0
+

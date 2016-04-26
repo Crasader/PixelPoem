@@ -1,0 +1,13 @@
+jiangxue
+
+2
+jiang 1 0 xue 3 0
+3
+liu 3 0 zong 1 0 yuan 2 0
+
+4 5
+qian 1 0 shan 1 0 niao 3 0 fei 1 0 jue 2 0
+wan 4 0 jing 4 0 ren 2 0 zong 1 0 mie 4 0
+gu 1 0 zhou 1 0 suo 1 0 li 4 0 weng 1 0
+du 2 0 diao 4 0 han 2 0 jiang 1 0 xue 3 0
+
