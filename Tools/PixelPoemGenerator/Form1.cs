@@ -56,7 +56,7 @@ namespace PixelPoemGenerator
             //reading from the file
             try
             {
-                br = new BinaryReader(new FileStream("D:\\Toney\\Personal\\MyProjects\\PixelPoem\\Resources\\diagrams\\poem_jingyesi.bmp", FileMode.Open));
+                br = new BinaryReader(new FileStream(_bmpFileFullPath, FileMode.Open));
                 // br = new BinaryReader(new FileStream(@"D:\Toney\SharedFolder\Temp\test.bmp", FileMode.Open));
             }
             catch (IOException e)

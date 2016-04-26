@@ -1,0 +1,9 @@
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\bin\Debug\PixelPoemGenerator.exe.config
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\bin\Debug\PixelPoemGenerator.exe
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\bin\Debug\PixelPoemGenerator.pdb
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\obj\Debug\PixelPoemGenerator.csprojResolveAssemblyReference.cache
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\obj\Debug\PixelPoemGenerator.Form1.resources
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\obj\Debug\PixelPoemGenerator.Properties.Resources.resources
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\obj\Debug\PixelPoemGenerator.csproj.GenerateResource.Cache
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\obj\Debug\PixelPoemGenerator.exe
+D:\Toney\Personal\MyProjects\PixelPoem\Tools\PixelPoemGenerator\obj\Debug\PixelPoemGenerator.pdb
