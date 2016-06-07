@@ -30,5 +30,10 @@ const char* CharacterId::getId()
 
 bool CharacterId::isSame(CharacterId* another)
 {
+    if (another == nullptr)
+    {
+        return false;
+    }
+    
     return (strcmp(_id, another->getId()) == 0);
 }

@@ -7,6 +7,8 @@
 //
 
 #include "CharacterSprite.hpp"
+#include "FlipActions/FlipActionFactory.hpp"
+
 
 CharacterSprite::CharacterSprite(CharacterTexture* texture)
 {
@@ -18,6 +20,9 @@ CharacterSprite::CharacterSprite(CharacterTexture* texture)
         if(texture->getTexture() != nullptr)
         {
             _sprite = Sprite::createWithTexture(texture->getTexture());
+            
+            _sprite->setOpacity(50);
+            _isForeSide = false;
             _sprite->retain();
         }
     }
@@ -92,12 +97,27 @@ bool CharacterSprite::isSame(CharacterSprite* another)
     return (_texture->getCharacterId()->isSame(another->getTexture()->getCharacterId()));
 }
 
+bool CharacterSprite::isForeSide()
+{
+    return _isForeSide;
+}
+
 void CharacterSprite::flip(float delayTime)
 {
     if (_sprite == nullptr)
         return;
     
+    
+    _isForeSide = !_isForeSide;
+    
+    FlipCharacterAction* action = FlipActionFactory::createRandomAction();
+    
     int opacity = 300 - _sprite->getOpacity();
+    action->initialize(delayTime, 0.6f, opacity);
+    action->takeFlip(_sprite);
+    
+    
+    /*
     float curScaleX = _sprite->getScaleX();
     float curScaleY = _sprite->getScaleY();
     
@@ -108,6 +128,6 @@ void CharacterSprite::flip(float delayTime)
     
     auto sequence = Sequence::create(delay, scale1, fade, scale2, nullptr);
     _sprite->runAction(sequence);
-    
+    */
     
 }

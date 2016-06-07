@@ -72,6 +72,12 @@
 		3C20B05A1C411BA30020A540 /* song_0_zhi_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0301C411BA30020A540 /* song_0_zhi_1_0.png */; };
 		3C20B05B1C411BA30020A540 /* song_0_zhi_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0311C411BA30020A540 /* song_0_zhi_2_0.png */; };
 		3C20B05C1C411BA30020A540 /* song_0_zhi_3_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0321C411BA30020A540 /* song_0_zhi_3_0.png */; };
+		3C6AB24B1CBC68F40046DCEB /* ScreenConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2491CBC68F40046DCEB /* ScreenConfig.cpp */; };
+		3C6AB2501CD800120046DCEB /* HorizionalFlipAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB24E1CD800120046DCEB /* HorizionalFlipAction.cpp */; };
+		3C6AB2531CD8002E0046DCEB /* FlipCharacterAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2511CD8002E0046DCEB /* FlipCharacterAction.cpp */; };
+		3C6AB2561CD800FC0046DCEB /* FlipActionFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2541CD800FC0046DCEB /* FlipActionFactory.cpp */; };
+		3C6AB2591CD804280046DCEB /* VerticalFlipAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2571CD804280046DCEB /* VerticalFlipAction.cpp */; };
+		3CE465BE1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE465BC1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
@@ -244,6 +250,19 @@
 		3C20B0301C411BA30020A540 /* song_0_zhi_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_zhi_1_0.png; sourceTree = "<group>"; };
 		3C20B0311C411BA30020A540 /* song_0_zhi_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_zhi_2_0.png; sourceTree = "<group>"; };
 		3C20B0321C411BA30020A540 /* song_0_zhi_3_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_zhi_3_0.png; sourceTree = "<group>"; };
+		3C6AB2491CBC68F40046DCEB /* ScreenConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScreenConfig.cpp; path = Common/ScreenConfig.cpp; sourceTree = "<group>"; };
+		3C6AB24A1CBC68F40046DCEB /* ScreenConfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ScreenConfig.hpp; path = Common/ScreenConfig.hpp; sourceTree = "<group>"; };
+		3C6AB24C1CBC6A5B0046DCEB /* DeviceDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DeviceDefinition.h; path = Common/DeviceDefinition.h; sourceTree = "<group>"; };
+		3C6AB24E1CD800120046DCEB /* HorizionalFlipAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HorizionalFlipAction.cpp; path = Views/FlipActions/HorizionalFlipAction.cpp; sourceTree = "<group>"; };
+		3C6AB24F1CD800120046DCEB /* HorizionalFlipAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HorizionalFlipAction.hpp; path = Views/FlipActions/HorizionalFlipAction.hpp; sourceTree = "<group>"; };
+		3C6AB2511CD8002E0046DCEB /* FlipCharacterAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlipCharacterAction.cpp; path = Views/FlipActions/FlipCharacterAction.cpp; sourceTree = "<group>"; };
+		3C6AB2521CD8002E0046DCEB /* FlipCharacterAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FlipCharacterAction.hpp; path = Views/FlipActions/FlipCharacterAction.hpp; sourceTree = "<group>"; };
+		3C6AB2541CD800FC0046DCEB /* FlipActionFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FlipActionFactory.cpp; path = Views/FlipActions/FlipActionFactory.cpp; sourceTree = "<group>"; };
+		3C6AB2551CD800FC0046DCEB /* FlipActionFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FlipActionFactory.hpp; path = Views/FlipActions/FlipActionFactory.hpp; sourceTree = "<group>"; };
+		3C6AB2571CD804280046DCEB /* VerticalFlipAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalFlipAction.cpp; path = Views/FlipActions/VerticalFlipAction.cpp; sourceTree = "<group>"; };
+		3C6AB2581CD804280046DCEB /* VerticalFlipAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VerticalFlipAction.hpp; path = Views/FlipActions/VerticalFlipAction.hpp; sourceTree = "<group>"; };
+		3CE465BC1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HorizionalFlipTwiceAction.cpp; path = Views/FlipActions/HorizionalFlipTwiceAction.cpp; sourceTree = "<group>"; };
+		3CE465BD1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HorizionalFlipTwiceAction.hpp; path = Views/FlipActions/HorizionalFlipTwiceAction.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
@@ -457,6 +476,9 @@
 				3C20AF7A1C3280C80020A540 /* Types.hpp */,
 				3C20AF9A1C3E79010020A540 /* Utils.cpp */,
 				3C20AF9B1C3E79010020A540 /* Utils.hpp */,
+				3C6AB2491CBC68F40046DCEB /* ScreenConfig.cpp */,
+				3C6AB24A1CBC68F40046DCEB /* ScreenConfig.hpp */,
+				3C6AB24C1CBC6A5B0046DCEB /* DeviceDefinition.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -464,6 +486,7 @@
 		3C20AF881C3A6F930020A540 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C6AB24D1CD7FFD80046DCEB /* FlipActions */,
 				3C20AF971C3E6E900020A540 /* PoemDiagram.cpp */,
 				3C20AF981C3E6E900020A540 /* PoemDiagram.hpp */,
 				3C20AF891C3A70170020A540 /* PixelPanel.cpp */,
@@ -541,6 +564,23 @@
 			name = song;
 			path = ../Resources/chars/song;
 			sourceTree = SOURCE_ROOT;
+		};
+		3C6AB24D1CD7FFD80046DCEB /* FlipActions */ = {
+			isa = PBXGroup;
+			children = (
+				3C6AB24E1CD800120046DCEB /* HorizionalFlipAction.cpp */,
+				3C6AB24F1CD800120046DCEB /* HorizionalFlipAction.hpp */,
+				3C6AB2571CD804280046DCEB /* VerticalFlipAction.cpp */,
+				3C6AB2581CD804280046DCEB /* VerticalFlipAction.hpp */,
+				3CE465BC1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp */,
+				3CE465BD1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.hpp */,
+				3C6AB2511CD8002E0046DCEB /* FlipCharacterAction.cpp */,
+				3C6AB2521CD8002E0046DCEB /* FlipCharacterAction.hpp */,
+				3C6AB2541CD800FC0046DCEB /* FlipActionFactory.cpp */,
+				3C6AB2551CD800FC0046DCEB /* FlipActionFactory.hpp */,
+			);
+			name = FlipActions;
+			sourceTree = "<group>";
 		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
@@ -825,11 +865,17 @@
 				3C20AF781C3280320020A540 /* Constants.cpp in Sources */,
 				3C20AF711C327D9F0020A540 /* GamePanelLayer.cpp in Sources */,
 				3C20AF6B1C3278FF0020A540 /* SelectStageScene.cpp in Sources */,
+				3C6AB24B1CBC68F40046DCEB /* ScreenConfig.cpp in Sources */,
 				3C20AF911C3A70770020A540 /* CharacterId.cpp in Sources */,
+				3C6AB2561CD800FC0046DCEB /* FlipActionFactory.cpp in Sources */,
+				3C6AB2591CD804280046DCEB /* VerticalFlipAction.cpp in Sources */,
+				3C6AB2501CD800120046DCEB /* HorizionalFlipAction.cpp in Sources */,
 				3C20AF661C3278BC0020A540 /* TitleScene.cpp in Sources */,
 				3C20AF871C3287150020A540 /* PoemDefinition.cpp in Sources */,
 				3C20AF7E1C3281D40020A540 /* GameDefinition.cpp in Sources */,
+				3CE465BE1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp in Sources */,
 				3C20AF6E1C32790E0020A540 /* MainGameScene.cpp in Sources */,
+				3C6AB2531CD8002E0046DCEB /* FlipCharacterAction.cpp in Sources */,
 				3C20AF9F1C40FA510020A540 /* ResourceLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

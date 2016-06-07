@@ -40,6 +40,9 @@ private:
     
     CharacterRotateType _rotateType;
     
+    bool _isForeSide;
+    
+    
 public:
     
     CharacterSprite(Texture2D* texture);
@@ -60,6 +63,7 @@ public:
     Sprite* getSprite();
     
     bool isSame(CharacterSprite* another);
+    bool isForeSide();
     
     void flip(float delayTime);
 };

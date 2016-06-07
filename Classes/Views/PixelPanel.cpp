@@ -158,6 +158,49 @@ void PixelPanel::setControllableState(bool state)
     this->_isControllable = state;
 }
 
+void PixelPanel::checkGameWin()
+{
+    
+    PoemDefinition * poem = this->_definition->getPoemDefinition();
+    int charCount = poem->getSentenceCount() * poem->getWordCountPerSentence();
+    
+    bool isWinState = true;
+    for (int i = 0; i < _characterSprites->size(); i++)
+    {
+        CharacterSprite *csprite = _characterSprites->at(i);
+        
+        bool inPoem = false;
+        for (int j = 0; j < charCount; j++) {
+            
+            CharacterId * character = poem->getCharacterSequence()->at(j);
+            if (character->isSame(csprite->getTexture()->getCharacterId()))
+            {
+                inPoem = true;
+                break;
+            }
+        }
+        
+        if ((inPoem && !csprite->isForeSide()) || (!inPoem && csprite->isForeSide()))
+        {
+            isWinState = false;
+            break;
+        }
+    }
+    
+    if (isWinState) {
+        log("Game Win");
+        
+        this->doGameFinish();
+    }
+}
+
+
+void PixelPanel::doGameFinish()
+{
+    _baseSprite->setScale(0.3f, 0.3f);
+}
+
+
 void PixelPanel::fillWithCharacters(Vector<CharacterId*>* characters)
 {
     PoemDiagram* diagram = _definition->getPoemDiagram();
@@ -297,8 +340,9 @@ void PixelPanel::flipCharacter(int charIndex)
     }
     
     auto delay = DelayTime::create(longestDelayTime);
-    auto callfunc = CallFunc::create([&]() { this->setControllableState(true); } );
-    auto sequence = Sequence::create(delay, callfunc, nullptr);
+    auto recoverState = CallFunc::create([&]() { this->setControllableState(true); } );
+    auto checkWin = CallFunc::create([&]() { this->checkGameWin(); } );
+    auto sequence = Sequence::create(delay, recoverState, checkWin, nullptr);
     _baseSprite->runAction(sequence);
     
 }

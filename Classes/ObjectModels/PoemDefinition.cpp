@@ -101,11 +101,21 @@ void PoemDefinition::setSentenceCount(int count)
 	this->_sentenceCount = count;
 }
 
+int PoemDefinition::getSentenceCount()
+{
+    return this->_sentenceCount;
+}
+
 void PoemDefinition::setWordCountPerSentence(int count)
 {
 	this->_wordCountPerSentence = count;
 }
-	
+
+int PoemDefinition::getWordCountPerSentence()
+{
+    return this->_wordCountPerSentence;
+}
+
 
 Vector<CharacterId*>* PoemDefinition::getCharacterSequence()
 {

@@ -44,11 +44,15 @@ private:
 	
     bool _isControllable;
     
+
 	void fillWithCharacters(Vector<CharacterId*>* characters);
 	
     void flipCharacter(int charIndex);
 	
     void setControllableState(bool state);
+    
+    void checkGameWin();
+    void doGameFinish();
     
 public:
     

@@ -43,7 +43,7 @@ bool TitleScene::init()
     
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
+                                           "res/ui/iphone6p/Button_Start.png",
                                            "CloseSelected.png",
                                            CC_CALLBACK_1(TitleScene::buttonStartCallback, this));
     
@@ -53,7 +53,7 @@ bool TitleScene::init()
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
+    this->addChild(menu, 200);
     
     /////////////////////////////
     // 3. add your codes below...
@@ -79,7 +79,7 @@ bool TitleScene::init()
     sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     
     // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    // this->addChild(sprite, 0);
     
     
     auto sample = Sprite::create("res/samples/sample_100_100_100dpi.png");
