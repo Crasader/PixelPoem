@@ -34,6 +34,12 @@ private:
 	int _sentenceCount;
 	int _wordCountPerSentence;
 	
+    int _nameLength;
+    int _authorLength;
+    
+    Vector<CharacterId*>* _nameSequence;
+    Vector<CharacterId*>* _authorSequence;
+    
     Vector<CharacterId*>* _characterSequence;
     Vector<CharacterId*>* _uniqueCharacters;
     
@@ -46,18 +52,25 @@ public:
 	virtual ~PoemDefinition();
 	
 	static PoemDefinition* createSample();
-	
+    static PoemDefinition* loadFromFileByName(std::string poemName);
+    
 	void setSentenceCount(int count);
 	void setWordCountPerSentence(int count);
 	
 	int getSentenceCount();
 	int getWordCountPerSentence();
 	
-	void appendCharacter(CharacterId* character);
+    void setNameLength(int value);
+    void setAuthorLength(int value);
+    
+    void appendName(CharacterId* character);
+    void appendAuthor(CharacterId* character);
+    void appendCharacter(CharacterId* character);
 	
     Vector<CharacterId*>* getCharacterSequence();
     Vector<CharacterId*>* getUniqueCharacters();
     
+    std::string getName();
     
 };
 #endif /* PoemDefinition_hpp */

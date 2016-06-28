@@ -1,0 +1,14 @@
+jingyesi
+
+3
+jing_4_0 ye_4_0 si_1_0
+2
+li_3_0 bai_2_0
+
+4 5
+chuang_2_0 qian_2_0 ming_2_0 yue_4_0 guang_1_0
+yi_2_0 shi_4_0 di_4_0 shang_4_0 shuang_1_0
+ju_3_0 tou_2_0 wang_4_0 ming_2_0 yue_4_0
+di_1_0 tou_2_0 si_1_0 gu_4_0 xiang_1_0
+
+

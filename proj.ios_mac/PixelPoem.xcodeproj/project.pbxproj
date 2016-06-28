@@ -27,8 +27,6 @@
 		3C20AF991C3E6E900020A540 /* PoemDiagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF971C3E6E900020A540 /* PoemDiagram.cpp */; };
 		3C20AF9C1C3E79010020A540 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF9A1C3E79010020A540 /* Utils.cpp */; };
 		3C20AF9F1C40FA510020A540 /* ResourceLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AF9D1C40FA510020A540 /* ResourceLibrary.cpp */; };
-		3C20AFAC1C41182B0020A540 /* poem_jingyesi.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 3C20AFAA1C41182B0020A540 /* poem_jingyesi.bmp */; };
-		3C20AFAD1C41182B0020A540 /* poem_jingyesi.pp in Sources */ = {isa = PBXBuildFile; fileRef = 3C20AFAB1C41182B0020A540 /* poem_jingyesi.pp */; };
 		3C20AFDA1C4118410020A540 /* song_0_chuang_2_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20AFAF1C4118410020A540 /* song_0_chuang_2_0.png */; };
 		3C20B0331C411BA30020A540 /* song_0_di_1_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B0091C411BA30020A540 /* song_0_di_1_0.png */; };
 		3C20B0341C411BA30020A540 /* song_0_di_4_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C20B00A1C411BA30020A540 /* song_0_di_4_0.png */; };
@@ -77,6 +75,7 @@
 		3C6AB2531CD8002E0046DCEB /* FlipCharacterAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2511CD8002E0046DCEB /* FlipCharacterAction.cpp */; };
 		3C6AB2561CD800FC0046DCEB /* FlipActionFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2541CD800FC0046DCEB /* FlipActionFactory.cpp */; };
 		3C6AB2591CD804280046DCEB /* VerticalFlipAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C6AB2571CD804280046DCEB /* VerticalFlipAction.cpp */; };
+		3CB7293F1D0787DD000360C6 /* TxtFileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CB7293D1D0787DD000360C6 /* TxtFileReader.cpp */; };
 		3CE465BE1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3CE465BC1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp */; };
 		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
@@ -205,8 +204,6 @@
 		3C20AF9B1C3E79010020A540 /* Utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Utils.hpp; path = Common/Utils.hpp; sourceTree = "<group>"; };
 		3C20AF9D1C40FA510020A540 /* ResourceLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ResourceLibrary.cpp; path = ObjectModels/ResourceLibrary.cpp; sourceTree = "<group>"; };
 		3C20AF9E1C40FA510020A540 /* ResourceLibrary.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ResourceLibrary.hpp; path = ObjectModels/ResourceLibrary.hpp; sourceTree = "<group>"; };
-		3C20AFAA1C41182B0020A540 /* poem_jingyesi.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = poem_jingyesi.bmp; path = diagrams/poem_jingyesi.bmp; sourceTree = "<group>"; };
-		3C20AFAB1C41182B0020A540 /* poem_jingyesi.pp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.pascal; name = poem_jingyesi.pp; path = diagrams/poem_jingyesi.pp; sourceTree = "<group>"; };
 		3C20AFAF1C4118410020A540 /* song_0_chuang_2_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = song_0_chuang_2_0.png; path = ../Resources/chars/song/song_0_chuang_2_0.png; sourceTree = SOURCE_ROOT; };
 		3C20B0091C411BA30020A540 /* song_0_di_1_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_di_1_0.png; sourceTree = "<group>"; };
 		3C20B00A1C411BA30020A540 /* song_0_di_4_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = song_0_di_4_0.png; sourceTree = "<group>"; };
@@ -261,6 +258,8 @@
 		3C6AB2551CD800FC0046DCEB /* FlipActionFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FlipActionFactory.hpp; path = Views/FlipActions/FlipActionFactory.hpp; sourceTree = "<group>"; };
 		3C6AB2571CD804280046DCEB /* VerticalFlipAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VerticalFlipAction.cpp; path = Views/FlipActions/VerticalFlipAction.cpp; sourceTree = "<group>"; };
 		3C6AB2581CD804280046DCEB /* VerticalFlipAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = VerticalFlipAction.hpp; path = Views/FlipActions/VerticalFlipAction.hpp; sourceTree = "<group>"; };
+		3CB7293D1D0787DD000360C6 /* TxtFileReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TxtFileReader.cpp; path = Common/TxtFileReader.cpp; sourceTree = "<group>"; };
+		3CB7293E1D0787DD000360C6 /* TxtFileReader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TxtFileReader.hpp; path = Common/TxtFileReader.hpp; sourceTree = "<group>"; };
 		3CE465BC1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HorizionalFlipTwiceAction.cpp; path = Views/FlipActions/HorizionalFlipTwiceAction.cpp; sourceTree = "<group>"; };
 		3CE465BD1CD80F1D00E2DB08 /* HorizionalFlipTwiceAction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HorizionalFlipTwiceAction.hpp; path = Views/FlipActions/HorizionalFlipTwiceAction.hpp; sourceTree = "<group>"; };
 		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
@@ -479,6 +478,8 @@
 				3C6AB2491CBC68F40046DCEB /* ScreenConfig.cpp */,
 				3C6AB24A1CBC68F40046DCEB /* ScreenConfig.hpp */,
 				3C6AB24C1CBC6A5B0046DCEB /* DeviceDefinition.h */,
+				3CB7293D1D0787DD000360C6 /* TxtFileReader.cpp */,
+				3CB7293E1D0787DD000360C6 /* TxtFileReader.hpp */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -508,8 +509,6 @@
 		3C20AFA91C4118090020A540 /* diagrams */ = {
 			isa = PBXGroup;
 			children = (
-				3C20AFAA1C41182B0020A540 /* poem_jingyesi.bmp */,
-				3C20AFAB1C41182B0020A540 /* poem_jingyesi.pp */,
 			);
 			name = diagrams;
 			sourceTree = "<group>";
@@ -794,7 +793,6 @@
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				3C20B0541C411BA30020A540 /* song_0_xiang_3_0.png in Resources */,
 				3C20B0441C411BA30020A540 /* song_0_qian_1_1.png in Resources */,
-				3C20AFAC1C41182B0020A540 /* poem_jingyesi.bmp in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				3C20B04F1C411BA30020A540 /* song_0_tian_2_0.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
@@ -851,6 +849,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				3CB7293F1D0787DD000360C6 /* TxtFileReader.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				3C20AF841C3284E60020A540 /* CharacterTexture.cpp in Sources */,
 				3C20AF9C1C3E79010020A540 /* Utils.cpp in Sources */,
@@ -860,7 +859,6 @@
 				3C20AF7B1C3280C80020A540 /* Types.cpp in Sources */,
 				3C20AF8B1C3A70170020A540 /* PixelPanel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				3C20AFAD1C41182B0020A540 /* poem_jingyesi.pp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				3C20AF781C3280320020A540 /* Constants.cpp in Sources */,
 				3C20AF711C327D9F0020A540 /* GamePanelLayer.cpp in Sources */,

@@ -17,7 +17,7 @@ CharacterSprite::CharacterSprite(CharacterTexture* texture)
         _texture = texture;
         _texture->retain();
         
-        if(texture->getTexture() != nullptr)
+        if(texture->getTexture() != nullptr && texture->getCharacterId() != nullptr)
         {
             _sprite = Sprite::createWithTexture(texture->getTexture());
             

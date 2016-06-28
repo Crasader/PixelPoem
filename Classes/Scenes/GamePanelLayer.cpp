@@ -30,7 +30,10 @@ bool GamePanelLayer::init()
     this->addChild(background, -100);
     
     // Adding PixelPanel
-    GameDefinition* def = GameDefinition::createSample();
+    // Loading from the file
+    
+    GameDefinition* def = GameDefinition::loadFromFileByIndex(1);
+    
     _pixelPanel = new PixelPanel(def);
     _pixelPanel->generatePixelCharacters();
     
@@ -46,6 +49,7 @@ bool GamePanelLayer::init()
     touchListener->onTouchCancelled = CC_CALLBACK_2(GamePanelLayer::onTouchCancelled, this);
     
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
+    
     
     
     

@@ -35,7 +35,7 @@ private:
     
 public:
     
-    static GameDefinition* loadFromFile(const char* filename);
+    static GameDefinition* loadFromFileByIndex(int index);
 	static GameDefinition* createSample();
 	
     GameDefinition(PoemDefinition* poem, PoemDiagram* diagram);

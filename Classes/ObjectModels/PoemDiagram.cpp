@@ -35,7 +35,7 @@ PoemDiagram* PoemDiagram::loadByName(const char* name)
     return NULL;
 }
 
-PoemDiagram* PoemDiagram::loadFromFile(const char* diagramfile)
+PoemDiagram* PoemDiagram::loadFromFile(std::string & diagramfile)
 {
     std::string fullpath = FileUtils::getInstance()->fullPathForFilename(diagramfile);
     FILE *in = fopen(fullpath.c_str(), "r");

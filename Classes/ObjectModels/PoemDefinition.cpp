@@ -7,6 +7,8 @@
 //
 
 #include "PoemDefinition.hpp"
+#include "../Common/TxtFileReader.hpp"
+#include "../Common/Utils.hpp"
 
 PoemDefinition::PoemDefinition()
 	: PoemDefinition(NULL)
@@ -18,6 +20,8 @@ PoemDefinition::PoemDefinition(const char* name)
 	this->_name = new char[255];
 	strcpy(this->_name, name);
 	
+    _nameSequence = new Vector<CharacterId*>();
+    _authorSequence = new Vector<CharacterId*>();
 	_characterSequence = new Vector<CharacterId*>();
 	_uniqueCharacters = new Vector<CharacterId*>();
 	
@@ -37,7 +41,48 @@ PoemDefinition::~PoemDefinition()
 	if (_uniqueCharacters != NULL)
 		delete(_uniqueCharacters);
 
-	
+}
+
+PoemDefinition* PoemDefinition::loadFromFileByName(std::string poemName)
+{
+    std::string poemfilename = StringUtil::format("res/poems/poem_%s.txt", poemName.c_str());
+    TxtFileReader * fileReader = new TxtFileReader(poemfilename);
+    
+    poemName = fileReader->readString();
+    
+    PoemDefinition* def = new PoemDefinition(poemName.c_str());
+    
+    int nameLength = fileReader->readInt();
+    def->setNameLength(nameLength);
+    for(int i = 0; i < nameLength; i++)
+    {
+        std::string name = fileReader->readString();
+        def->appendName(CharacterId::create(name.c_str()));
+    }
+    
+    int authorLength = fileReader->readInt();
+    def->setAuthorLength(authorLength);
+    for(int i = 0; i < authorLength; i++)
+    {
+        std::string author = fileReader->readString();
+        def->appendAuthor(CharacterId::create(author.c_str()));
+    }
+    
+    int sentenceCount = fileReader->readInt();
+    int wordCount = fileReader->readInt();
+    def->setSentenceCount(sentenceCount);
+    def->setWordCountPerSentence(wordCount);
+    
+    for(int i = 0; i < sentenceCount * wordCount; i++)
+    {
+        std::string charName = fileReader->readString();
+        def->appendCharacter(CharacterId::create(charName.c_str()));
+    }
+    
+    fileReader->release();
+    
+    def->autorelease();
+    return def;
 }
 
 PoemDefinition* PoemDefinition::createSample()
@@ -68,6 +113,26 @@ PoemDefinition* PoemDefinition::createSample()
 	def->appendCharacter(CharacterId::create("xiang_1_0"));
     
     return def;
+}
+
+void PoemDefinition::setNameLength(int value)
+{
+    this->_nameLength = value;
+}
+
+void PoemDefinition::setAuthorLength(int value)
+{
+    this->_authorLength = value;
+}
+
+void PoemDefinition::appendName(CharacterId* character)
+{
+    _nameSequence->pushBack(character);
+}
+
+void PoemDefinition::appendAuthor(CharacterId* character)
+{
+    _authorSequence->pushBack(character);
 }
 
 void PoemDefinition::appendCharacter(CharacterId* character)
@@ -127,4 +192,7 @@ Vector<CharacterId*>* PoemDefinition::getUniqueCharacters()
 	return _uniqueCharacters;
 }
     
-
+std::string PoemDefinition::getName()
+{
+    return std::string(this->_name);
+}

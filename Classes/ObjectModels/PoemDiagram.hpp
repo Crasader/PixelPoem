@@ -53,7 +53,7 @@ private:
 public:
     
 	static PoemDiagram* loadByName(const char* name);
-    static PoemDiagram* loadFromFile(const char* diagram_file);
+    static PoemDiagram* loadFromFile(std::string & diagram_file);
     
     PoemDiagram(int w, int h);
     
